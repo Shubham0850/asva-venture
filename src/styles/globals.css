@@ -1,80 +1,9 @@
 /* Custom font imports */
-
-@font-face {
-  font-family: "Gellix Medium";
-  src: url("/font/Gellix-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #292727;
-  font-family: "Gellix Medium", sans-serif;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.blink {
-  animation: blink 1.5s infinite;
-}
-
-/* gradient css */
-/* Colors */
-:root {
-  --page-background-color: #2f3c4f;
-  --gradient-color-1: #c53998;
-  --gradient-color-2: #ccff00;
-}
-
-/* Keyframes */
-@keyframes animationgradienttitle {
-  0% {
-    background-position: 0 1600px;
-  }
-  100% {
-    background-position: 1600px 0;
-  }
-}
-
-.gradient {
-  font-size: 60px;
-  background: -webkit-linear-gradient(
-    left,
-    var(--gradient-color-1),
-    var(--gradient-color-2),
-    var(--gradient-color-1)
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-duration: 25s;
-  animation-name: animationgradienttitle;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-}
-
-/* Hero */
-
-.hero{
-  height: 85vh;
-  background-image: url("/hero-bg2.png");
-  background-size: cover;
-  border-radius: 25px;
-  overflow: hidden;
-}
-.hero-details{
-  bottom: 0;
+  font-family: "Space Grotesk", sans-serif;
 }

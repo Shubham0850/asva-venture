@@ -1,30 +1,32 @@
-import ConsumerLayer from "@/components/home/ConsumerLayer";
 import Hero from "@/components/home/Hero";
-import Innovators from "@/components/home/Innovators";
-import JoinUsCard from "@/components/home/JoinUsCard";
-import OurHeritage from "@/components/home/OurHeritage";
-import WhoWeAre from "@/components/home/WhoWeAre";
+import ReachOut from "@/components/home/ReachOut";
+import RecentAma from "@/components/home/RecentAma";
+import RecentAnnouncement from "@/components/home/RecentAnnouncement";
+import RecentPosts from "@/components/home/RecentPosts";
+import RecentResearch from "@/components/home/RecentResearch";
+import Subscribe from "@/components/home/Subscribe";
 import Head from "next/head";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>HashMind | Convergence of WEB3 and AI Venture Studio</title>
+        <title>Asva Ventures | We are backing visionary founders Build on next-generation internet</title>
         <meta
           name="description"
-          content="Convergence of WEB3 and AI Venture Studio"
+          content="We are backing visionary founders Build on next-generation internet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/asva.png" />
       </Head>
       
       <Hero/>
-      <WhoWeAre/>
-      <Innovators/>
-      <OurHeritage/>
-      <ConsumerLayer/>
-      <JoinUsCard/>
+      <RecentPosts/>
+      <RecentResearch/>
+      <RecentAnnouncement/>
+      <RecentAma/>
+      <ReachOut/>
+      <Subscribe/>
     </>
   );
 }
