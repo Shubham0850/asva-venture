@@ -6,6 +6,7 @@ import {
   Link,
   Text,
   Button,
+  Divider
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -56,6 +57,7 @@ function NavBar() {
           </Link>
         </Flex>
       </Flex>
+      <Divider borderColor={'black'}/>
     </Container>
   );
 }
