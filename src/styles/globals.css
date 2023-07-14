@@ -7,3 +7,11 @@
   box-sizing: border-box;
   font-family: "Space Grotesk", sans-serif;
 }
+
+
+/* Subscribe section */
+.subscribe-input{
+  border: 1px solid;
+  border-image: linear-gradient(to right, #FF5656, #61AAFF, #FF6B00, #7C4FFF, #00FF94) 1;
+  border-image-slice: 1;
+}
