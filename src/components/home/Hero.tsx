@@ -6,8 +6,8 @@ import { Box, ChakraProvider, Button, Text,Icon } from "@chakra-ui/react";
 function Hero() {
   return (
     <Container maxW={1300} >
-      <ChakraProvider>
-      <Box p={4} paddingTop={['90px', '40px']}>
+      <ChakraProvider >
+      <Box p={4} paddingTop={['90px', '40px']} backgroundImage={'/heroBg.png'}>
         <Box mb={6}>
           <Text
           width={['100%', '930px']}
