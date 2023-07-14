@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Center, Container } from "@chakra-ui/react";
 import React from "react";
 import {BsArrowRight} from "react-icons/bs"
 import { Box, ChakraProvider, Button, Text,Icon } from "@chakra-ui/react";
@@ -44,11 +44,14 @@ function Hero() {
           fontSize={['12px', '16px']}
         >
           Talk with Us
-          <Icon className="blink" as={BsArrowRight} color={"#111111"} m={2} />
+          <Icon className="blink" as={BsArrowRight} color={"#111111"} m={2}  />
         </Button>
       </Box>
       </Box>
-    </Container>
+ <Center p={4}>
+      <Text   width={'410px'} height={'50px'} fontSize={'40px'} color={'#4C545A'} fontWeight={700}>Explore Our Insights</Text>
+ </Center>
+  </Container>
   );
 }
 
