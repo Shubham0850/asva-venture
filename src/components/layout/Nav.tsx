@@ -57,7 +57,7 @@ function NavBar() {
           </Link>
         </Flex>
       </Flex>
-      <Divider borderColor={'black'}/>
+      <Divider borderColor={'#888888'}/>
     </Container>
   );
 }
