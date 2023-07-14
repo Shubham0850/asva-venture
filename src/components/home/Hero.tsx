@@ -6,9 +6,10 @@ import { Box, ChakraProvider, Button, Text,Icon } from "@chakra-ui/react";
 function Hero() {
   return (
     <Container maxW={1300} >
-      <ChakraProvider >
-      <Box p={4} paddingTop={['90px', '40px']} backgroundImage={'/heroBg.png'}>
-        <Box mb={6}>
+
+      <Box p={4} paddingTop={['90px', '40px']} backgroundImage={'/heroBg.png'}>  
+        <Box py={20}>
+        <Box mb={6} >
           <Text
           width={['100%', '930px']}
           fontSize={['26px', '48px']}
@@ -46,7 +47,7 @@ function Hero() {
           <Icon className="blink" as={BsArrowRight} color={"#111111"} m={2} />
         </Button>
       </Box>
-      </ChakraProvider>
+      </Box>
     </Container>
   );
 }
