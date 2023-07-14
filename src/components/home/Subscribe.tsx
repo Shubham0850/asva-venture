@@ -3,8 +3,8 @@ import React from "react";
 
 function Subscribe() {
   return (
-    <Container maxW={1300}>
-      <Box p={4} maxWidth="600px" mx="auto">
+    <Container maxW={1300} py={"125px"}>
+      <Box mx="auto">
         <Flex direction="column" alignItems="center" textAlign="center" my={8}>
           <Heading as="h1" size="xl" mb={4} fontWeight={500} fontSize={'48px'} color={'#4C545A'} width={'770px'} height={'60px'}>
             The Ventures & The Builders
