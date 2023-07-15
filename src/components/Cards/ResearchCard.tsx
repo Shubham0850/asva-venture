@@ -25,12 +25,12 @@ function ResearchCard({
       padding={"32px 24px"}
       position={"relative"}
     >
-      <Flex justifyContent={"space-between"}>
+  
         <Text color={"#0075FF"} fontSize={14} fontWeight={700}>
           {category}
         </Text>
-        <Link href={link}>icon</Link>
-      </Flex>
+       
+    
 
       <Text
         color={"#4C545A"}
