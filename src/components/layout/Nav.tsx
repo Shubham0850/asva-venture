@@ -2,7 +2,7 @@ import { Box, Container, Flex, Link, Divider } from "@chakra-ui/react";
 
 function NavBar() {
   return (
-    <Box bg={"#fff"}>
+    <Box bg={"#F8F8F8"}>
       <Container maxW={1300}>
         <Flex
           as="nav"

@@ -11,14 +11,13 @@ import React from "react";
 
 function Subscribe() {
   return (
-    <Box bg={"#F8F8F8"}>
-      <Container maxW={1300} py={"125px"}>
+    <Box bg={"#fff"} pb={"100px"}>
+      <Container maxW={1300} py={"125px"} bg={" #F8F8F8"} rounded={"15px"}>
         <Box mx="auto">
           <Flex
             direction="column"
             alignItems="center"
             textAlign="center"
-            my={8}
           >
             <Heading
               as="h1"
@@ -48,7 +47,7 @@ function Subscribe() {
                 best VC reads, and a lot more
               </Text>
             </Box>
-            <Flex gap={0} mt={"50px"} className="subscribe-input">
+            <Flex gap={0} mt={"50px"} border={"1px solid #7A7A7A"} rounded={5} overflow={"hidden"}>
               <Input
                 placeholder="Enter your email"
                 rounded={0}
@@ -59,14 +58,16 @@ function Subscribe() {
                 focusBorderColor="transparent"
               />
               <Button
-                background="#80FF7D"
-                px={"24px"}
-                py={"12px"}
+                background="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%);"
+                px={"34px"}
+                py={"20px"}
                 rounded={0}
                 _hover={{ bg: "#80ff7d" }}
                 color={"#1F1F1F"}
+				fontFamily={"PowerGrotesk"}
+				fontWeight={400}
               >
-                Subscribe
+                Subscribe Now
               </Button>
             </Flex>
           </Flex>

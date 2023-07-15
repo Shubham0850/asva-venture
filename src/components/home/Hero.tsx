@@ -5,7 +5,7 @@ import { Box, Button, Text, Icon } from "@chakra-ui/react";
 
 function Hero() {
   return (
-    <Box position={"relative"} bg={"white"}>
+    <Box position={"relative"} bg={"#F8F8F8"}>
       <Container maxW={1300} position={"relative"} zIndex={2}>
         <Box py={"100px"} px={5}>
           <Box py={20}>

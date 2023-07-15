@@ -1,14 +1,13 @@
 import { Container, Flex, Text, Link, Grid, Box } from "@chakra-ui/react";
 import { AmaPodcastData } from "../../data/amaPodcastData";
 import React from "react";
-import ResearchCard from "../Cards/ResearchCard";
 import { GoArrowRight } from "react-icons/go";
 import LatestCard from "../Cards/LatestCard";
 
 function RecentAma() {
   return (
     <Box
-      background={"#fff"}
+      background={"#F8F8F8"}
       pb={100}
       borderBottom={"1px solid #ddd"}
       borderStyle={"dashed"}
@@ -46,7 +45,7 @@ function RecentAma() {
               date,
               tags,
               authers,
-              type
+              type,
             } = amaPodcastData;
             return (
               <LatestCard

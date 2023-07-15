@@ -15,7 +15,7 @@ import { GoArrowRight } from "react-icons/go";
 function RecentPosts() {
   return (
     <Box
-      bg={"#fff"}
+      bg={"#F8F8F8"}
       position={"relative"}
       zIndex={10}
       pb={100}
@@ -50,7 +50,7 @@ function RecentPosts() {
             Recent post
           </Text>
 
-          <Link href="#">
+          <Link href="/recent-post">
             <Flex alignItems={"center"}>
               <Text color="#4C545A" fontSize={20} fontWeight={500}>
                 See all

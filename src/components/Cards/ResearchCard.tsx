@@ -24,13 +24,11 @@ function ResearchCard({
       border={"1px solid #D9D9D9"}
       padding={"32px 24px"}
       position={"relative"}
+      bg={"#fff"}
     >
-  
-        <Text color={"#0075FF"} fontSize={14} fontWeight={700}>
-          {category}
-        </Text>
-       
-    
+      <Text color={"#0075FF"} fontSize={14} fontWeight={700}>
+        {category}
+      </Text>
 
       <Text
         color={"#4C545A"}

@@ -82,7 +82,6 @@ const Section = () => {
             fontWeight="700"
             letterSpacing="1px"
             fontFamily={"PowerGrotesk"}
-            
           >
             Reach Out To Us
           </Heading>

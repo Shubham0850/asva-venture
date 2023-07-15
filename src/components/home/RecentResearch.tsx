@@ -14,7 +14,7 @@ import { GoArrowRight } from "react-icons/go";
 function RecentResearch() {
   return (
     <Box
-      background={"#fff"}
+      background={"#F8F8F8"}
       pb={100}
       borderBottom={"1px solid #ddd"}
       borderStyle={"dashed"}

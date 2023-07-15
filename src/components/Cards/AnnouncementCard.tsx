@@ -1,45 +1,49 @@
-import { Box,Text ,Link,Flex} from '@chakra-ui/react'
-import React from 'react'
+import { Box, Text, Link, Flex } from "@chakra-ui/react";
+import React from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import Tags from "../common/Tags";
 
-interface announcementprops{
-  title:string,
-  name:string,
-  date:string,
-  tags:string,
-  link:string
+interface announcementprops {
+  title: string;
+  name: string;
+  date: string;
+  tags: string;
+  link: string;
 }
 
-function AnnouncementCard({title,name,date,tags,link}: announcementprops) {
+function AnnouncementCard({
+  title,
+  name,
+  date,
+  tags,
+  link,
+}: announcementprops) {
   return (
-    <Box 
-    border={"1px solid #D9D9D9"}
-    padding={"32px 24px"}
-    position={"relative"}
+    <Box
+      border={"1px solid #D9D9D9"}
+      padding={"32px 24px"}
+      position={"relative"}
+      bg={"#fff"}
     >
-
-    
-        <Text  
-        width={'296px'}
-        height={'64px'}
-         color={"#4C545A"}
+      <Text
+        width={"296px"}
+        height={"64px"}
+        color={"#4C545A"}
         fontSize={24}
         fontFamily={"PowerGrotesk"}
         fontWeight={500}
         mb={2}
-        >{title}
-        </Text>
-    
- 
-         
-        <Flex gap={2} mt={3}   mb={"70px"}>
-            {tags.map((tag) => {
-              return <Tags>{tag}</Tags>;
-            })}
-          </Flex>
+      >
+        {title}
+      </Text>
 
-         <Flex fontSize={14}>
+      <Flex gap={2} mt={3} mb={"70px"}>
+        {tags.map((tag) => {
+          return <Tags>{tag}</Tags>;
+        })}
+      </Flex>
+
+      <Flex fontSize={14}>
         <Text
           textTransform={"uppercase"}
           color={"#798D9B"}
@@ -53,7 +57,7 @@ function AnnouncementCard({title,name,date,tags,link}: announcementprops) {
         </Text>
       </Flex>
 
-         <Box position={"absolute"} top={"12px"} right={"12px"}>
+      <Box position={"absolute"} top={"12px"} right={"12px"}>
         <Link href={"#"}>
           <HiOutlineArrowUpRight
             style={{ fontSize: 20, color: "#4C545A", marginLeft: 5 }}
@@ -61,8 +65,7 @@ function AnnouncementCard({title,name,date,tags,link}: announcementprops) {
         </Link>
       </Box>
     </Box>
-
   );
 }
 
-export default AnnouncementCard
+export default AnnouncementCard;
