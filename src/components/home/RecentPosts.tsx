@@ -15,7 +15,14 @@ import { GoArrowRight } from "react-icons/go";
 
 function RecentPosts() {
   return (
-    <Box bg={"#fff"} position={"relative"} zIndex={10}>
+    <Box
+      bg={"#fff"}
+      position={"relative"}
+      zIndex={10}
+      pb={100}
+      borderBottom={"1px solid #ddd"}
+      borderStyle={"dashed"}
+    >
       <Box textAlign={"center"}>
         <Heading
           as="h1"
