@@ -1,6 +1,11 @@
 /* Custom font imports */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "PowerGrotesk";
+  src: url("/fonts/PowerGrotesk-Regular.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +13,21 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
+.secondary-font {
+  font-family: "PowerGrotesk", sans-serif;
+}
 
 /* Subscribe section */
-.subscribe-input{
+.subscribe-input {
   border: 1px solid;
-  border-image: linear-gradient(to right, #FF5656, #61AAFF, #FF6B00, #7C4FFF, #00FF94) 1;
+  border-image: linear-gradient(
+      to right,
+      #ff5656,
+      #61aaff,
+      #ff6b00,
+      #7c4fff,
+      #00ff94
+    )
+    1;
   border-image-slice: 1;
 }

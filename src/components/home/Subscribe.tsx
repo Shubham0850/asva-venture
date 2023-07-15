@@ -27,8 +27,7 @@ function Subscribe() {
               fontWeight={500}
               fontSize={"48px"}
               color={"#4C545A"}
-              width={"770px"}
-              height={"60px"}
+              fontFamily={"PowerGrotesk"}
             >
               The Ventures & The Builders
             </Heading>

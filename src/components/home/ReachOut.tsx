@@ -37,11 +37,12 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
         lineHeight="150%"
         color="white"
         mb={2}
+        fontFamily={"PowerGrotesk"}
       >
         {heading}
       </Heading>
       <Text
-        color="#DDDDDD"
+        color="rgba(221, 221, 221, 0.64)"
         mt={"20px"}
         mb={"50px"}
         fontSize="16px"
@@ -58,6 +59,9 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
         rounded={0}
         size={"sm"}
         width="min-content"
+        fontFamily={"PowerGrotesk"}
+        letterSpacing={"1px"}
+        fontWeight={"normal"}
       >
         {buttonText}
       </Button>
@@ -76,8 +80,9 @@ const Section = () => {
             mb={16}
             fontSize="40px"
             fontWeight="700"
-            letterSpacing="-1px"
-            fontFamily="inherit"
+            letterSpacing="1px"
+            fontFamily={"PowerGrotesk"}
+            
           >
             Reach Out To Us
           </Heading>
