@@ -1,4 +1,6 @@
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import Featured from "@/components/RecentPosts/Featured";
+import Latest from "@/components/RecentPosts/Latest";
+import { Box, Container, Text } from "@chakra-ui/react";
 import React from "react";
 
 function RecentPosts() {
@@ -7,12 +9,7 @@ function RecentPosts() {
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
         <Container maxW={1300}>
           <Box w={"80%"}>
-            <Text
-              mb={"18px"}
-              fontWeight={500}
-              fontSize={"64px"}
-              color={"#000"}
-            >
+            <Text mb={"18px"} fontWeight={500} fontSize={"64px"} color={"#000"}>
               Recent Post
             </Text>
             <Text fontSize={20} fontWeight={400} color={"#888"}>
@@ -24,6 +21,9 @@ function RecentPosts() {
           </Box>
         </Container>
       </Box>
+
+      <Featured />
+      <Latest />
     </Box>
   );
 }
