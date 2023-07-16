@@ -1,7 +1,6 @@
 import { Box, Text, Link, Flex } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
-import Tags from "../Common/Tags";
 
 interface announcementprops {
   title: string;
@@ -41,7 +40,11 @@ function AnnouncementCard({
         {tags.map((tag, index) => {
           return (
             <div key={index}>
-              <Tags>{tag}</Tags>
+              <Box bg={"#6EFE96"} borderRadius={12} padding={"2px 12px"}>
+                <Text color={"#1F1F1F"} fontSize={12} fontWeight={500}>
+                  {tag}
+                </Text>
+              </Box>
             </div>
           );
         })}
