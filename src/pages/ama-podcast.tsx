@@ -1,8 +1,7 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
 import Subscribe from "@/components/Common/Subscribe";
-import Tags from "@/components/Common/Tags";
 import { podcastData } from "@/data/podcastData";
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Tag, Text } from "@chakra-ui/react";
 import React from "react";
 
 function AmaAndPodcast() {
@@ -26,7 +25,19 @@ function AmaAndPodcast() {
 
             <Flex gap={2} mt={"25px"}>
               {tags.map((tag, index) => {
-                return <Tags key={index}>{tag}</Tags>;
+                return (
+                  <Tag
+                    key={index}
+                    size={"sm"}
+                    variant="solid"
+                    background="#6EFE96"
+                    color={"#1F1F1F"}
+                    rounded={"full"}
+                    padding={"2px 12px"}
+                  >
+                    {tag}
+                  </Tag>
+                );
               })}
             </Flex>
           </Box>

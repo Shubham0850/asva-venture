@@ -1,8 +1,7 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Tag, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { BsSpotify, BsTwitter } from "react-icons/bs";
-import Tags from "../Common/Tags";
 
 interface LatestCardProps {
   spotifyLink?: string;
@@ -85,7 +84,18 @@ function LatestCard({
 
           <Flex gap={2} mt={3}>
             {tags.map((tag, index) => {
-              return <Tags key={index}>{tag}</Tags>;
+              return (
+                <Tag
+                  size={"sm"}
+                  variant="solid"
+                  background="#6EFE96"
+                  color={"#1F1F1F"}
+                  rounded={"full"}
+                  padding={"2px 12px"}
+                >
+                  {tag}
+                </Tag>
+              );
             })}
           </Flex>
         </Box>

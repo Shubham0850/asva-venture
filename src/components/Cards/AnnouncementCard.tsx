@@ -1,4 +1,4 @@
-import { Box, Text, Link, Flex } from "@chakra-ui/react";
+import { Box, Text, Link, Flex, Tag } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 
@@ -39,13 +39,17 @@ function AnnouncementCard({
       <Flex gap={2} mt={3} mb={"70px"}>
         {tags.map((tag, index) => {
           return (
-            <div key={index}>
-              <Box bg={"#6EFE96"} borderRadius={12} padding={"2px 12px"}>
-                <Text color={"#1F1F1F"} fontSize={12} fontWeight={500}>
-                  {tag}
-                </Text>
-              </Box>
-            </div>
+            <Tag
+              key={index}
+              size={"sm"}
+              variant="solid"
+              background="#6EFE96"
+              color={"#1F1F1F"}
+              rounded={"full"}
+              padding={"2px 12px"}
+            >
+              {tag}
+            </Tag>
           );
         })}
       </Flex>

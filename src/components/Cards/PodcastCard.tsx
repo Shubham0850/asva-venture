@@ -1,6 +1,5 @@
-import { Box, Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Tag, Text } from "@chakra-ui/react";
 import React from "react";
-import Tags from "../Common/Tags";
 import { FiCopy } from "react-icons/fi";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 
@@ -72,7 +71,19 @@ function PodcastCard({
 
           <Flex gap={2} mt={3}>
             {tags.map((tag, index) => {
-              return <Tags key={index}>{tag}</Tags>;
+              return (
+                <Tag
+                  key={index}
+                  size={"sm"}
+                  variant="solid"
+                  background="#6EFE96"
+                  color={"#1F1F1F"}
+                  rounded={"full"}
+                  padding={"2px 12px"}
+                >
+                  {tag}
+                </Tag>
+              );
             })}
           </Flex>
         </Box>
