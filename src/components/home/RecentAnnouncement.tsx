@@ -1,4 +1,4 @@
-import { Container, Flex, Text, Link, Box, Grid } from "@chakra-ui/react";
+import { Container, Flex, Text, Box, Grid } from "@chakra-ui/react";
 import React from "react";
 import { AnnouncementData } from "../../data/announcementData";
 import AnnouncementCard from "../Cards/AnnouncementCard";
@@ -33,16 +33,18 @@ function RecentAnnouncement() {
         </Flex>
 
         <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-          {AnnouncementData.map((announcementData) => {
+          {AnnouncementData.map((announcementData, index) => {
             const { title, date, tags, name, link } = announcementData;
             return (
-              <AnnouncementCard
-                title={title}
-                date={date}
-                name={name}
-                link={link}
-                tags={tags}
-              />
+              <div key={index}>
+                <AnnouncementCard
+                  title={title}
+                  date={date}
+                  name={name}
+                  link={link}
+                  tags={tags}
+                />
+              </div>
             );
           })}
         </Grid>

@@ -1,16 +1,11 @@
-import { Box, Container, Flex, Grid, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Container, Grid, Text } from "@chakra-ui/react";
 import React from "react";
 import { latestPostData } from "../../data/latestPostData";
 import LatestCard from "../Cards/LatestCard";
-import { GoArrowRight } from "react-icons/go";
 
 function Latest() {
   return (
-    <Box
-      background={"#fff"}
-      pb={100}
-    >
+    <Box background={"#fff"} pb={100}>
       <Container maxW={1300}>
         <Box py={10}>
           <Text
@@ -24,17 +19,19 @@ function Latest() {
         </Box>
 
         <Grid templateColumns="repeat(1, 1fr)" gap={6}>
-          {latestPostData.map((amaPodcastData) => {
+          {latestPostData.map((amaPodcastData, index) => {
             const { title, link, date, tags, authers, type } = amaPodcastData;
             return (
-              <LatestCard
-                title={title}
-                link={link}
-                date={date}
-                tags={tags}
-                authers={authers}
-                type={type}
-              />
+              <div key={index}>
+                <LatestCard
+                  title={title}
+                  link={link}
+                  date={date}
+                  tags={tags}
+                  authers={authers}
+                  type={type}
+                />
+              </div>
             );
           })}
         </Grid>

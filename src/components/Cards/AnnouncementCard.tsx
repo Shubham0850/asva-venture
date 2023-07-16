@@ -1,13 +1,13 @@
 import { Box, Text, Link, Flex } from "@chakra-ui/react";
 import React from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
-import Tags from "../common/Tags";
+import Tags from "../Common/Tags";
 
 interface announcementprops {
   title: string;
   name: string;
   date: string;
-  tags: string;
+  tags: string[];
   link: string;
 }
 
@@ -38,8 +38,12 @@ function AnnouncementCard({
       </Text>
 
       <Flex gap={2} mt={3} mb={"70px"}>
-        {tags.map((tag) => {
-          return <Tags>{tag}</Tags>;
+        {tags.map((tag, index) => {
+          return (
+            <div key={index}>
+              <Tags>{tag}</Tags>
+            </div>
+          );
         })}
       </Flex>
 

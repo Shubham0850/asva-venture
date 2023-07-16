@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function AmaAndPodcastCard() {
-  return (
-	<div>AmaPodcastCard</div>
-  )
+  return <div>AmaPodcastCard</div>;
 }
 
-export default AmaAndPodcastCard
+export default AmaAndPodcastCard;

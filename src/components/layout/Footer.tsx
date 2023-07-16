@@ -6,7 +6,7 @@ function Footer() {
   return (
     <Box backgroundColor={"#1A1A1A"}>
       <Container maxW={1300}>
-        <Box >
+        <Box>
           <Flex py={20} justify={"space-between"}>
             <Box>
               <Box>

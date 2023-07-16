@@ -1,30 +1,32 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { BsSpotify, BsTwitter } from "react-icons/bs";
 import Tags from "../Common/Tags";
+import { FiCopy } from "react-icons/fi";
+import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 
-interface LatestCardProps {
-  spotifyLink?: string;
-  twitterLink?: string;
-  title: string;
-  link: string;
-  date: string;
-  tags: string[];
-  authers: string[];
+interface PodcastCardProps {
   type: string;
+  date: string;
+  title: string;
+  authors: string[];
+  tags: string[];
+  link: string;
+  twitterLink?: string;
+  linkedInLink?: string;
+  facebookLink?: string;
 }
 
-function LatestCard({
-  spotifyLink,
-  twitterLink,
-  title,
-  link,
-  date,
-  tags,
-  authers,
+function PodcastCard({
   type,
-}: LatestCardProps) {
+  date,
+  title,
+  authors,
+  tags,
+  link,
+  twitterLink,
+  linkedInLink,
+  facebookLink,
+}: PodcastCardProps) {
   return (
     <Box
       width={"100%"}
@@ -33,26 +35,11 @@ function LatestCard({
       py={6}
     >
       <Flex justifyContent={"space-between"}>
-        <Box width={"25%"}>
+        <Box>
           <Text color={"#4C545A"} fontSize={16} fontFamily={"PowerGrotesk"}>
             {type} / {date}
           </Text>
 
-          <Flex gap={5} mt={4}>
-            {twitterLink && (
-              <Link href={twitterLink} target="_blank">
-                <BsTwitter style={{ color: "#1D9BF0", fontSize: "32px" }} />
-              </Link>
-            )}
-            {spotifyLink && (
-              <Link href={spotifyLink} target="_blank">
-                <BsSpotify style={{ color: "#1ED760", fontSize: "32px" }} />
-              </Link>
-            )}
-          </Flex>
-        </Box>
-
-        <Box width={"75%"}>
           <Text
             fontSize={24}
             color={"#4C545A"}
@@ -64,20 +51,20 @@ function LatestCard({
           </Text>
 
           <Flex gap={5}>
-            {authers.map((auther, index) => {
+            {authors.map((author, index) => {
               return (
                 <Text
+                  key={index}
                   fontSize={14}
                   color={"#8C9295"}
                   textTransform={"uppercase"}
                   fontWeight={500}
                   fontFamily={"PowerGrotesk"}
-                  key={index}
                 >
                   <Text as="span" display="inline-block" marginRight={2}>
                     &bull;
                   </Text>
-                  {auther}
+                  {author}
                 </Text>
               );
             })}
@@ -89,9 +76,28 @@ function LatestCard({
             })}
           </Flex>
         </Box>
+
+        <Flex alignItems={"center"} gap={3}>
+          <Text color={"#4C545A"} fontSize={20} fontWeight={500}>
+            Share:{" "}
+          </Text>
+          <Button
+            color={"#4C545A"}
+            border={"0.5px solid #4C545A"}
+            rounded={"full"}
+            gap={2}
+          >
+            <FiCopy style={{ fontSize: 20 }} />
+            <Text fontSize={14}>Copy link</Text>
+          </Button>
+
+          <BsTwitter style={{ color: "#4C545A", fontSize: 20 }} />
+          <BsFacebook style={{ color: "#4C545A", fontSize: 20 }} />
+          <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
+        </Flex>
       </Flex>
     </Box>
   );
 }
 
-export default LatestCard;
+export default PodcastCard;

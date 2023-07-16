@@ -1,11 +1,4 @@
-import {
-  Container,
-  Flex,
-  Text,
-  Link,
-  Grid,
-  Box,
-} from "@chakra-ui/react";
+import { Container, Flex, Text, Link, Grid, Box } from "@chakra-ui/react";
 import { RecentResearchData } from "../../data/recentResearchData";
 import React from "react";
 import ResearchCard from "../Cards/ResearchCard";
@@ -43,18 +36,20 @@ function RecentResearch() {
         </Flex>
 
         <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-          {RecentResearchData.map((researchData) => {
+          {RecentResearchData.map((researchData, index) => {
             const { category, title, link, description, date, writer } =
               researchData;
             return (
-              <ResearchCard
-                category={category}
-                title={title}
-                link={link}
-                description={description}
-                date={date}
-                writer={writer}
-              />
+              <div key={index}>
+                <ResearchCard
+                  category={category}
+                  title={title}
+                  link={link}
+                  description={description}
+                  date={date}
+                  writer={writer}
+                />
+              </div>
             );
           })}
         </Grid>

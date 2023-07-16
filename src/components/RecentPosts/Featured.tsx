@@ -38,18 +38,20 @@ function Featured() {
         </Box>
 
         <Grid templateColumns="repeat(3, 1fr)" gap={5}>
-          {RecentPostData.slice(0, 3).map((postData) => {
+          {RecentPostData.slice(0, 3).map((postData, index) => {
             const { bannerImg, title, date, description, postLink, writer } =
               postData;
             return (
-              <RecentCard
-                writer={writer}
-                date={date}
-                bannerImg={bannerImg}
-                description={description}
-                title={title}
-                postLink={postLink}
-              />
+              <div key={index}>
+                <RecentCard
+                  writer={writer}
+                  date={date}
+                  bannerImg={bannerImg}
+                  description={description}
+                  title={title}
+                  postLink={postLink}
+                />
+              </div>
             );
           })}
         </Grid>

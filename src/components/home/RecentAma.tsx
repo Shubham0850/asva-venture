@@ -36,7 +36,7 @@ function RecentAma() {
         </Flex>
 
         <Grid templateColumns="repeat(1, 1fr)" gap={6}>
-          {AmaPodcastData.map((amaPodcastData) => {
+          {AmaPodcastData.map((amaPodcastData, index) => {
             const {
               spotifyLink,
               twitterLink,
@@ -48,16 +48,18 @@ function RecentAma() {
               type,
             } = amaPodcastData;
             return (
-              <LatestCard
-                spotifyLink={spotifyLink}
-                twitterLink={twitterLink}
-                title={title}
-                link={link}
-                date={date}
-                tags={tags}
-                authers={authers}
-                type={type}
-              />
+              <div key={index}>
+                <LatestCard
+                  spotifyLink={spotifyLink}
+                  twitterLink={twitterLink}
+                  title={title}
+                  link={link}
+                  date={date}
+                  tags={tags}
+                  authers={authers}
+                  type={type}
+                />
+              </div>
             );
           })}
         </Grid>

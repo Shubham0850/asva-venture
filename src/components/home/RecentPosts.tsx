@@ -1,11 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
 import { RecentPostData } from "../../data/recentPostData";
@@ -64,18 +57,20 @@ function RecentPosts() {
 
         {/* Render cards component */}
         <Grid templateColumns="repeat(2, 1fr)" gap={16}>
-          {RecentPostData.map((postData) => {
+          {RecentPostData.map((postData, index) => {
             const { bannerImg, title, date, description, postLink, writer } =
               postData;
             return (
-              <RecentCard
-                writer={writer}
-                date={date}
-                bannerImg={bannerImg}
-                description={description}
-                title={title}
-                postLink={postLink}
-              />
+              <div key={index}>
+                <RecentCard
+                  writer={writer}
+                  date={date}
+                  bannerImg={bannerImg}
+                  description={description}
+                  title={title}
+                  postLink={postLink}
+                />
+              </div>
             );
           })}
         </Grid>
