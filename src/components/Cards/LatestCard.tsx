@@ -86,6 +86,7 @@ function LatestCard({
             {tags.map((tag, index) => {
               return (
                 <Tag
+                  key={index}
                   size={"sm"}
                   variant="solid"
                   background="#6EFE96"
