@@ -2,16 +2,11 @@ import React from "react";
 import {
   Box,
   Container,
-  Divider,
-  Flex,
   Grid,
-  Heading,
   Text,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { RecentPostData } from "@/data/recentPostData";
 import RecentCard from "../Cards/RecentCard";
-import { GoArrowRight } from "react-icons/go";
 
 function Featured() {
   return (
