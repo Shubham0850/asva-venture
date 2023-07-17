@@ -33,8 +33,9 @@ function Subscribe() {
             </Heading>
             <Box mb={4}>
               <Text
-                 width={["100%", "1000px"]}
-                height={"60px"}
+                 width={["100%", "100%", "1000px"]}
+                 height="auto"
+         
                 fontWeight={400}
                 fontSize={["16px", "20px"]}
                 color={"#888888"}
