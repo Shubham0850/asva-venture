@@ -85,7 +85,7 @@ const Section = () => {
           >
             Reach Out To Us
           </Heading>
-          <Flex mb={20} justifyContent="space-between">
+          <Flex mb={20} justifyContent="space-between"   flexDirection={{ base: "column", md: "row" }}>
             <Card
               image="ellipse-1.svg"
               heading="Apply for Investment"
