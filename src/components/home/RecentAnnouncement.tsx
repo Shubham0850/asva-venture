@@ -32,7 +32,7 @@ function RecentAnnouncement() {
           </Flex>
         </Flex>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid  gap={6} templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} >
           {AnnouncementData.map((announcementData, index) => {
             const { title, date, tags, name, link } = announcementData;
             return (
