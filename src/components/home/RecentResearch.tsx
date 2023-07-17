@@ -35,7 +35,7 @@ function RecentResearch() {
           </Link>
         </Flex>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid  templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}gap={6}>
           {RecentResearchData.map((researchData, index) => {
             const { category, title, link, description, date, writer } =
               researchData;
