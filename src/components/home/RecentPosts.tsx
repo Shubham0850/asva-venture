@@ -56,7 +56,7 @@ function RecentPosts() {
         </Flex>
 
         {/* Render cards component */}
-        <Grid templateColumns="repeat(2, 1fr)" gap={16}>
+        <Grid templateColumns={["1fr", "repeat(2, 1fr)"]} gap={16}>
           {RecentPostData.map((postData, index) => {
             const { bannerImg, title, date, description, postLink, writer } =
               postData;
