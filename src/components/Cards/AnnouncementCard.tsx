@@ -25,8 +25,6 @@ function AnnouncementCard({
       bg={"#fff"}
     >
       <Text
-        width={"296px"}
-        height={"64px"}
         color={"#4C545A"}
         fontSize={24}
         fontFamily={"PowerGrotesk"}
