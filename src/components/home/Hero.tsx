@@ -5,10 +5,10 @@ import { Box, Button, Text, Icon } from "@chakra-ui/react";
 
 function Hero() {
   return (
-    <Box position={"relative"} bg={"#F8F8F8"}>
+    <Box position={"relative"} bg={"#F8F8F8"} >
       <Container maxW={1300} position={"relative"} zIndex={2}>
-        <Box py={"100px"} px={5}>
-          <Box py={20}>
+      
+          <Box pt={'130px'} pb={'500px'} justifyContent={'flex-start'}>
             <Box mb={6}>
               <Text
                 width={["100%", "930px"]}
@@ -26,7 +26,7 @@ function Hero() {
             </Box>
             <Box mb={6}>
               <Text
-                width={["100%", "930px"]}
+                width={["100%", "80%"]}
                 fontSize={["12px", "20px"]}
                 style={{
                   height: "92px",
@@ -51,10 +51,10 @@ function Hero() {
                 className="blink"
                 as={BsArrowRight}
                 color={"#111111"}
-                m={2}
+              
               />
             </Button>
-          </Box>
+          
         </Box>
       </Container>
 
@@ -63,7 +63,7 @@ function Hero() {
         width={"90%"}
         position={"absolute"}
         top={0}
-        right={0}
+        right={-35}
         zIndex={1}
       />
     </Box>
