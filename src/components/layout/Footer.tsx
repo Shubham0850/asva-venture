@@ -17,22 +17,22 @@ function Footer() {
               </Box>
               <Flex
                 color={"#FFFFFF"}
-                gap={10}
+                gap={[4,10]}
                 pt={20}
-                mb={[20,0]}
+                mb={[4,0]}
                 direction={{ base: "row", md: "row" }}
               >
                 <Link href={"#"}>
-                  <Text fontSize={"20px"}>Home</Text>
+                  <Text  fontSize={["16px", "20px"]}>Home</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={"20px"}>Insights</Text>
+                  <Text  fontSize={["16px", "20px"]}>Insights</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={"20px"}>Career</Text>
+                  <Text  fontSize={["16px", "20px"]}>Career</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={"20px"}>About</Text>
+                  <Text  fontSize={["16px", "20px"]}>About</Text>
                 </Link>
               </Flex>
             </Box>

@@ -32,7 +32,7 @@ function Featured() {
           </Text>
         </Box>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap={5}>
+        <Grid   templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]} gap={[4, 5]}>
           {RecentPostData.slice(0, 3).map((postData, index) => {
             const { bannerImg, title, date, description, postLink, writer } =
               postData;
