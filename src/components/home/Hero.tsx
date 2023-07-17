@@ -63,7 +63,7 @@ function Hero() {
         width={"90%"}
         position={"absolute"}
         top={0}
-        right={-35}
+        right={0}
         zIndex={1}
       />
     </Box>
