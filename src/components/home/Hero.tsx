@@ -12,9 +12,9 @@ function Hero() {
            
               <Text
               
-                width={["100%", "930px"]}
+                width={["100%",'100%', "930px"]}
                 fontSize={["36px", "48px"]} 
-                  height={ ["auto", "130px"]}
+                  height={'auto'}
                 style={{
                
                   fontWeight: 700,
@@ -29,10 +29,10 @@ function Hero() {
            
               <Text
               mt={'28px'}
-                width={["100%", "80%"]}
+                width={["100%",'100%', "899px"]}
                 fontSize={["14px", "20px"]}
                 style={{
-                  height: "92px",
+                  height: "auto",
                   fontWeight: 400,
                 }}
                 color={"#888"}
