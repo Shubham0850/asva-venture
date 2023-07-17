@@ -21,7 +21,7 @@ function RecentPosts() {
           size="xl"
           mb={"24px"}
           fontWeight={600}
-          fontSize={"48px"}
+          fontSize={['32px',"48px"]}
           color={"#4C545A"}
           height={"60px"}
           fontFamily={"PowerGrotesk"}
