@@ -31,3 +31,11 @@
     1;
   border-image-slice: 1;
 }
+
+/* hidden footer */
+
+@media (max-width:767px){
+  .hidden{
+  display: none;
+}
+}
