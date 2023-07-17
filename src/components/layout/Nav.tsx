@@ -14,9 +14,9 @@ function NavBar() {
           color="white"
         >
           {/* Logo */}
-          <Flex>
+          
             <img src="/dark-logo.png" alt="asva-venture logo" />
-          </Flex>
+        
 
           {/* Links */}
           <Flex
