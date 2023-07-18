@@ -1,5 +1,5 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import { podcastData } from "@/data/podcastData";
 import { Box, Container, Flex, Tag, Text } from "@chakra-ui/react";
 import React from "react";
