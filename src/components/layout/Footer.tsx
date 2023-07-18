@@ -1,6 +1,7 @@
 import { Box, Container, Divider, Flex, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsDiscord, BsMedium, BsTwitter } from "react-icons/bs";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
           <Flex py={20} direction={{ base: "column", md: "row" }} justify={"space-between"}>
             <Box>
               <Box>
-                <img src="/white-logo.png" alt="asva logo" />
+                <Image src="/white-logo.png" alt="asva logo"  width={100} height={40}/>
                 <Text color={"#888888"} fontSize={"16px"}>
                   Backing and accelerating web3 founders
                 </Text>
