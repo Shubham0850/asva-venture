@@ -3,7 +3,7 @@ import { Box, Container, Flex, Link, Divider } from "@chakra-ui/react";
 function NavBar() {
   return (
     <Box bg={"#F8F8F8"}>
-      <Container maxW={1300}>
+      <Container maxW={1300}  >
         <Flex
           as="nav"
           align="center"
@@ -25,25 +25,25 @@ function NavBar() {
             alignItems="center"
           >
             <Link
-              href="/"
+              href="#"
               mr={4}
               color="black"
               _hover={{
-                color: "black",
                 textDecoration: "underline",
                 fontWeight: "bold",
               }}
+              fontWeight={500}
             >
               Home
             </Link>
-            <Link href="#" mr={4} color="black">
-              Our Thesis
+            <Link href="#" mr={4} color="#888888" fontWeight={500} >
+              About Us
             </Link>
-            <Link href="#" mr={4} color="black">
-              Blog
+            <Link href="#" mr={4} color="#888888" fontWeight={500}>
+              Resources
             </Link>
-            <Link href="#" mr={4} color="black">
-              Contact
+            <Link href="#" mr={4} color="#888888" fontWeight={500}>
+              Portfolio
             </Link>
           </Flex>
         </Flex>
