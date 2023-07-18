@@ -8,7 +8,7 @@ function Hero() {
     <Box position={"relative"} bg={"#F8F8F8"} >
       <Container maxW={1300} position={"relative"} zIndex={2}>
       
-          <Box pt={['90px','130px']} pb={['120px','320px']} justifyContent={'flex-start'} >
+          <Box pt={['90px','130px']} pb={['120px','180px', '320px']} justifyContent={'flex-start'} >
            
               <Text
               
