@@ -16,7 +16,7 @@ function Latest() {
           Latest
         </Text>
         <Grid templateColumns="repeat(1, 1fr)" gap={6}>
-          {AmaPodcastData.map((amaPodcastData) => {
+          {AmaPodcastData.map((amaPodcastData,index) => {
             const {
               spotifyLink,
               twitterLink,
@@ -28,6 +28,7 @@ function Latest() {
               type,
             } = amaPodcastData;
             return (
+              <div key={index}>
               <LatestCard
                 spotifyLink={spotifyLink}
                 twitterLink={twitterLink}
@@ -38,6 +39,7 @@ function Latest() {
                 authers={authers}
                 type={type}
               />
+              </div>
             );
           })}
         </Grid>
