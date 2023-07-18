@@ -1,4 +1,4 @@
-import { Container, Flex, Text, Box, Grid } from "@chakra-ui/react";
+import { Container, Flex, Text, Box, Grid,Link } from "@chakra-ui/react";
 import React from "react";
 import { AnnouncementData } from "../../data/announcementData";
 import AnnouncementCard from "../Cards/AnnouncementCard";
@@ -22,6 +22,8 @@ function RecentAnnouncement() {
           >
             Announcements – explore about news
           </Text>
+
+           <Link href='/announcements' >
           <Flex alignItems={"center"}>
             <Text color="#4C545A" fontSize={20} fontWeight={500}>
               See all
@@ -30,6 +32,8 @@ function RecentAnnouncement() {
               style={{ marginLeft: "8px", color: "#4C545A", fontSize: 24 }}
             />
           </Flex>
+          </Link>
+
         </Flex>
 
         <Grid  gap={6} templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} >
