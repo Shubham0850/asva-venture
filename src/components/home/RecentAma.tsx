@@ -23,7 +23,7 @@ function RecentAma() {
             AMA & Podcasts - explore industry expert insights
           </Text>
 
-          <Link href="#">
+          <Link href="/ama-podcast">
             <Flex alignItems={"center"}>
               <Text color="#4C545A" fontSize={20} fontWeight={500}>
                 See all
