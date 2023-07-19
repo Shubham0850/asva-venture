@@ -21,7 +21,7 @@ function RecentPosts() {
           size="xl"
           mb={"24px"}
           fontWeight={600}
-          fontSize={['32px',"48px"]}
+          fontSize={["32px", "40px"]}
           color={"#4C545A"}
           height={"60px"}
           fontFamily={"PowerGrotesk"}
@@ -30,9 +30,9 @@ function RecentPosts() {
         </Heading>
       </Box>
 
-      <Box borderTop={"1px solid #ddd"} borderStyle={"dashed"} />
+      <Box className="border" />
 
-      <Container maxW={1300}>
+      <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text
             color={"#4C545A"}

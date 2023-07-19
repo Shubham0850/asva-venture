@@ -6,21 +6,11 @@ import { GoArrowRight } from "react-icons/go";
 
 function RecentResearch() {
   return (
-    <Box
-      background={"#F8F8F8"}
-      pb={100}
-      borderBottom={"1px solid #ddd"}
-      borderStyle={"dashed"}
-    >
-      <Container maxW={1300}>
+    <Box background={"#F8F8F8"} pb={100} className="border">
+      <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
-          <Text
-            color={"#4C545A"}
-            textTransform={"uppercase"}
-            fontWeight={800}
-            fontSize={24}
-          >
-            Research Blogs - datadriven market analysis
+          <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
+            RESEARCH BLOGS - Datadriven Market Analysis
           </Text>
 
           <Link href="#">
@@ -35,7 +25,7 @@ function RecentResearch() {
           </Link>
         </Flex>
 
-        <Grid  templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}gap={6}>
+        <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
           {RecentResearchData.map((researchData, index) => {
             const { category, title, link, description, date, writer } =
               researchData;

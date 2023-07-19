@@ -5,7 +5,7 @@ import LatestCard from "../Cards/LatestCard";
 
 function Latest() {
   return (
-    <Container maxW="1300">
+    <Container maxW="1300" padding="0px 50px">
       <Box background={"#fff"}>
         <Text
           color="#4C545A"
@@ -16,7 +16,7 @@ function Latest() {
           Latest
         </Text>
         <Grid templateColumns="repeat(1, 1fr)" gap={6}>
-          {AmaPodcastData.map((amaPodcastData,index) => {
+          {AmaPodcastData.map((amaPodcastData, index) => {
             const {
               spotifyLink,
               twitterLink,
@@ -29,16 +29,16 @@ function Latest() {
             } = amaPodcastData;
             return (
               <div key={index}>
-              <LatestCard
-                spotifyLink={spotifyLink}
-                twitterLink={twitterLink}
-                title={title}
-                link={link}
-                date={date}
-                tags={tags}
-                authers={authers}
-                type={type}
-              />
+                <LatestCard
+                  spotifyLink={spotifyLink}
+                  twitterLink={twitterLink}
+                  title={title}
+                  link={link}
+                  date={date}
+                  tags={tags}
+                  authers={authers}
+                  type={type}
+                />
               </div>
             );
           })}

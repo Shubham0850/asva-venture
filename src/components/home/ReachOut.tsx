@@ -62,6 +62,7 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
         fontFamily={"PowerGrotesk"}
         letterSpacing={"1px"}
         fontWeight={"normal"}
+        color="black"
       >
         {buttonText}
       </Button>
@@ -72,7 +73,7 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
 const Section = () => {
   return (
     <Box bg="#1F1F1F" py={"50px"}>
-      <Container maxW={1400}>
+      <Container maxW={1400} padding="0px 50px">
         <Box>
           <Heading
             color="white"
@@ -85,7 +86,11 @@ const Section = () => {
           >
             Reach Out To Us
           </Heading>
-          <Flex mb={20} justifyContent="space-between"   flexDirection={{ base: "column", md: "row" }}>
+          <Flex
+            mb={20}
+            justifyContent="space-between"
+            flexDirection={{ base: "column", md: "row" }}
+          >
             <Card
               image="ellipse-1.svg"
               heading="Apply for Investment"

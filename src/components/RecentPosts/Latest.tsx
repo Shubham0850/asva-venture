@@ -6,7 +6,7 @@ import LatestCard from "../Cards/LatestCard";
 function Latest() {
   return (
     <Box background={"#fff"} pb={100}>
-      <Container maxW={1300}>
+      <Container maxW={1300} padding="0px 50px">
         <Box py={10}>
           <Text
             color={"#4C545A"}

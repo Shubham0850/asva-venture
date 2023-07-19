@@ -5,7 +5,7 @@ import { AnnouncementData } from "@/data/announcementData";
 
 function Featured() {
   return (
-    <Container maxW={1300}>
+    <Container maxW={1300} padding="0px 50px">
       <Box background={"#fff"}>
         <Text
           color="#4C545A"

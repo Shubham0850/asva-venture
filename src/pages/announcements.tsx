@@ -7,7 +7,7 @@ function Announcements() {
   return (
     <Box background={"#fff"}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
-        <Container maxW={1300}>
+        <Container maxW={1300} padding="0px 50px">
           <Box w={"80%"}>
             <Text mb={"18px"} fontWeight={500} fontSize={"64px"} color={"#000"}>
               Announcements

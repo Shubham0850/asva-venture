@@ -27,12 +27,7 @@ function PodcastCard({
   facebookLink,
 }: PodcastCardProps) {
   return (
-    <Box
-      width={"100%"}
-      borderTop={"1px solid #ddd"}
-      borderStyle={"dashed"}
-      py={6}
-    >
+    <Box width={"100%"} className="border" py={6} bg="red">
       <Flex justifyContent={"space-between"}>
         <Box>
           <Text color={"#4C545A"} fontSize={16} fontFamily={"PowerGrotesk"}>
