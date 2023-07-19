@@ -62,7 +62,7 @@ const podcast = () => {
          <Box px={32} py={8}>
                 
                  <Text py={4}>AI use cases in DeFi</Text>
-                 <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
+                 <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="352"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
                  <Text>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat accusamus ex, illum illo adipisci quo officiis suscipit voluptas et unde, dolor error temporibus dignissimos soluta sit fugiat quam nesciunt rerum dolore eius dolores consectetur!</Text>
                  </Box>
         <Divider borderColor={'black'}/>
