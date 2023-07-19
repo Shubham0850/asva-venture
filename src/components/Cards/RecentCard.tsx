@@ -22,7 +22,9 @@ function RecentCard({
 }: RecenCardPropsType) {
   return (
     <Box width={"100%"}>
-      <Image src={bannerImg} width={"100%"} alt="banner" mb={"20px"} />
+      <Link href={postLink}>
+        <Image src={bannerImg} width={"100%"} alt="banner" mb={"20px"} />
+      </Link>
       <Flex alignItems={"flex-start"}>
         <Box>
           <Text

@@ -7,7 +7,7 @@ export const RecentPostData = [
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     writer: "Jayjeet kumar",
     date: "19 July 2022",
-    postLink: "#",
+    postLink: "/blog/absd",
   },
   {
     bannerImg:
@@ -17,7 +17,7 @@ export const RecentPostData = [
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     writer: "Jayjeet kumar",
     date: "19 July 2022",
-    postLink: "#",
+    postLink: "/blog/absd",
   },
   {
     bannerImg:
@@ -27,7 +27,7 @@ export const RecentPostData = [
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     writer: "Jayjeet kumar",
     date: "19 July 2022",
-    postLink: "#",
+    postLink: "/blog/absd",
   },
   {
     bannerImg:
@@ -37,6 +37,6 @@ export const RecentPostData = [
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     writer: "Jayjeet kumar",
     date: "19 July 2022",
-    postLink: "#",
+    postLink: "/blog/absd",
   },
 ];

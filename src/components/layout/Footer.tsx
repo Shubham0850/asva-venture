@@ -16,7 +16,7 @@ function Footer() {
             <Box>
               <Box>
                 <Image
-                  src="/white-logo.png"
+                  src="/asva-venture-logo-white.svg"
                   alt="asva logo"
                   width={100}
                   height={40}
@@ -33,21 +33,29 @@ function Footer() {
                 direction={{ base: "row", md: "row" }}
               >
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]}>Home</Text>
+                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                    Home
+                  </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]}>Insights</Text>
+                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                    Insights
+                  </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]}>Career</Text>
+                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                    Career
+                  </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]}>About</Text>
+                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                    About
+                  </Text>
                 </Link>
               </Flex>
             </Box>
 
-            <Box>
+            <Box pr="30px">
               <Box color={"#FFFFFF"}>
                 <Text py={2} fontSize={"20px"}>
                   Contact Us
@@ -105,15 +113,15 @@ function Footer() {
             align="center"
             justify={"center"}
             gap={10}
-            p={5}
+            p="30px"
           >
             <Text
-              fontSize={["12px", "14px"]}
+              fontSize={["12px", "16px"]}
               letterSpacing={"-1px"}
               lineHeight={"150%"}
             >
               {" "}
-              <span className="hidden">asvaventures © </span>2022 All rights
+              <span className="hidden">Asvaventures © </span>2022 All rights
               reserved
             </Text>
             <Text fontSize={["12px", "14px"]} letterSpacing={"-1px"}>
