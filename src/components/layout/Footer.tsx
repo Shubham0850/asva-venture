@@ -6,45 +6,54 @@ import Image from "next/image";
 function Footer() {
   return (
     <Box backgroundColor={"#1A1A1A"}>
-      <Container maxW={1300}>
+      <Container maxW={1300} padding="0px 50px">
         <Box>
-          <Flex py={20} direction={{ base: "column", md: "row" }} justify={"space-between"}>
+          <Flex
+            py={20}
+            direction={{ base: "column", md: "row" }}
+            justify={"space-between"}
+          >
             <Box>
               <Box>
-                <Image src="/white-logo.png" alt="asva logo"  width={100} height={40}/>
+                <Image
+                  src="/white-logo.png"
+                  alt="asva logo"
+                  width={100}
+                  height={40}
+                />
                 <Text color={"#888888"} fontSize={"16px"}>
                   Backing and accelerating web3 founders
                 </Text>
               </Box>
               <Flex
                 color={"#FFFFFF"}
-                gap={[4,10]}
+                gap={[4, 10]}
                 pt={20}
-                mb={[4,0]}
+                mb={[4, 0]}
                 direction={{ base: "row", md: "row" }}
               >
                 <Link href={"#"}>
-                  <Text  fontSize={["16px", "20px"]}>Home</Text>
+                  <Text fontSize={["16px", "20px"]}>Home</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text  fontSize={["16px", "20px"]}>Insights</Text>
+                  <Text fontSize={["16px", "20px"]}>Insights</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text  fontSize={["16px", "20px"]}>Career</Text>
+                  <Text fontSize={["16px", "20px"]}>Career</Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text  fontSize={["16px", "20px"]}>About</Text>
+                  <Text fontSize={["16px", "20px"]}>About</Text>
                 </Link>
               </Flex>
             </Box>
 
-            <Box >
+            <Box>
               <Box color={"#FFFFFF"}>
                 <Text py={2} fontSize={"20px"}>
                   Contact Us
                 </Text>
                 <Link href={"#"}>
-                  <Text fontSize={20} pb={[4,0]} textDecoration={"underline"}>
+                  <Text fontSize={20} pb={[4, 0]} textDecoration={"underline"}>
                     info@asvalabs.com
                   </Text>
                 </Link>
@@ -55,7 +64,7 @@ function Footer() {
                 gap={6}
                 style={{ width: "256px", height: "30px" }}
                 direction={{ base: "row", md: "row" }}
-                pt={[0,20]}
+                pt={[0, 20]}
               >
                 <Text fontSize={"20px"}>Follow Us :</Text>
                 <Link href={"#"}>
@@ -98,10 +107,23 @@ function Footer() {
             gap={10}
             p={5}
           >
-            <Text fontSize={['12px','14px']} letterSpacing={'-1px'} lineHeight={'150%'}> <span className="hidden">asvaventures © </span>2022 All rights reserved</Text>
-            <Text fontSize={['12px','14px']} letterSpacing={'-1px'}> <Link href={"#"} >Terms Of Use</Link></Text>
-            <Text fontSize={['12px','14px']} letterSpacing={'-1px'}> <Link href={"#"}>Privacy Policy</Link></Text>
-           
+            <Text
+              fontSize={["12px", "14px"]}
+              letterSpacing={"-1px"}
+              lineHeight={"150%"}
+            >
+              {" "}
+              <span className="hidden">asvaventures © </span>2022 All rights
+              reserved
+            </Text>
+            <Text fontSize={["12px", "14px"]} letterSpacing={"-1px"}>
+              {" "}
+              <Link href={"#"}>Terms Of Use</Link>
+            </Text>
+            <Text fontSize={["12px", "14px"]} letterSpacing={"-1px"}>
+              {" "}
+              <Link href={"#"}>Privacy Policy</Link>
+            </Text>
           </Flex>
         </Box>
       </Container>

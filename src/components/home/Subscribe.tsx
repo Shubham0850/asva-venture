@@ -33,9 +33,8 @@ function Subscribe() {
             </Heading>
             <Box mb={4}>
               <Text
-                 width={["100%", "100%", "1000px"]}
-                 height="auto"
-         
+                width={["100%", "100%", "1000px"]}
+                height="auto"
                 fontWeight={400}
                 fontSize={["16px", "20px"]}
                 color={"#888888"}
@@ -51,8 +50,9 @@ function Subscribe() {
             </Box>
             <Flex gap={0} mt={"50px"} className="subscribe-input">
               <Input
-                placeholder="Enter your email"
+                placeholder="What's your email"
                 rounded={0}
+                p="24px"
                 fontSize={18}
                 color={"#888"}
                 outline={"none"}
@@ -61,13 +61,14 @@ function Subscribe() {
               />
               <Button
                 background="#80FF7D"
-                px={"24px"}
-                py={"12px"}
+                px={"32px"}
+                py={"24px"}
                 rounded={0}
                 _hover={{ bg: "#80ff7d" }}
                 color={"#1F1F1F"}
+                fontWeight="400"
               >
-                Subscribe
+                Subscribe Now
               </Button>
             </Flex>
           </Flex>

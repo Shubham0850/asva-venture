@@ -6,21 +6,11 @@ import LatestCard from "../Cards/LatestCard";
 
 function RecentAma() {
   return (
-    <Box
-      background={"#F8F8F8"}
-      pb={100}
-      borderBottom={"1px solid #ddd"}
-      borderStyle={"dashed"}
-    >
-      <Container maxW={1300}>
+    <Box background={"#F8F8F8"} pb={100} className="border">
+      <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
-          <Text
-            color={"#4C545A"}
-            textTransform={"uppercase"}
-            fontWeight={800}
-            fontSize={24}
-          >
-            AMA & Podcasts - explore industry expert insights
+          <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
+            AMA & PODCASTS - Explore Industry Expert Insights
           </Text>
 
           <Link href="/ama-podcast">
