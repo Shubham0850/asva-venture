@@ -109,7 +109,7 @@ function PodcastCard({
       </Flex>
        
       <Box p={10}>
-        <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
+        <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="352"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
       </Box>
     </Box>
   );
