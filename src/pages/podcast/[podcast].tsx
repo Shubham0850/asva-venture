@@ -43,7 +43,7 @@ const podcast = () => {
                 );
               })}
             </Flex>
-            <Text color={"#7A7A7A"} fontSize={'20px'} fontWeight={500}  fontFamily={'Power Grotesk Trial'} py={4}>Phoenix Baker  / Jeff Bannniker</Text>
+            <Text color={"#7A7A7A"} fontSize={'20px'} fontWeight={500}   py={4}>Phoenix Baker  / Jeff Bannniker</Text>
           </Box>
         </Container>
 </Box>
