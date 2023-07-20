@@ -9,13 +9,13 @@ function RecentAma() {
     <Box background={"#F8F8F8"} pb={100} className="border">
       <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
-          <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
+          <Text color={"#4C545A"} fontWeight={{base:700,md:800}} fontSize={{base:'20px',md:'24px'}}>
             AMA & PODCASTS <span className="hidden">- Explore Industry Expert Insights</span>
           </Text>
 
           <Link href="/ama-podcast">
             <Flex alignItems={"center"}>
-              <Text color="#4C545A" fontSize={20} fontWeight={500}>
+              <Text color="#4C545A" fontSize={{base:'16px',md:'20px'}} fontWeight={500}>
                 See all
               </Text>
               <GoArrowRight

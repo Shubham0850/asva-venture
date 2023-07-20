@@ -49,15 +49,17 @@ function Hero() {
           <Button
             gap={2}
             mt={"50px"}
+            
             backgroundColor="#80FF7D"
             color="#111111"
             padding={["16px", "20px 24px"]}
-            fontSize={["12px", "16px"]}
+            fontSize={["14px", "16px"]}
             rounded={0}
             margin={""}
+         
           >
             Talk with Us
-            <Icon className="blink" as={BsArrowRight} color={"#111111"} />
+            <Icon className="blink" as={BsArrowRight} width={'20px'} height={'20px'} color={"#111111"} />
           </Button>
         </Box>
       </Container>

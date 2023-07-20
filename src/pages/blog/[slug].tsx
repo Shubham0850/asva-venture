@@ -19,7 +19,7 @@ function Blog() {
     "What We’re Reading",
   ];
   return (
-    <Box>
+    <Box pt={'105px'}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
         <Container maxW={1300}>
           <Box w={"80%"}>
@@ -91,9 +91,9 @@ function Blog() {
               started on new web3 projects. Over seven weeks, we coached teams
               on the fundamentals of building a web3 startup from the ground up,
               including the underlying infrastructure, applications & business
-              strategy, operational best practices, and more.</p>
+              strategy, operational best practices, and more.
 
-              <p style={{paddingBottom:'38px'}}>The 40 founders in
+             The 40 founders in
               that cohort went on to build some of the industry’s leading
               companies They have raised over $300M in venture funding and built
               products that users love from the program has been viewed over 1M

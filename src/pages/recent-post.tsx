@@ -6,14 +6,21 @@ import React from "react";
 
 function RecentPosts() {
   return (
-    <Box background={"#fff"}>
+    <Box background={"#fff"} pt={'105px'}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
         <Container maxW={1300} padding="0px 50px">
-          <Box w={"80%"}>
-            <Text mb={"18px"} fontWeight={700} fontSize={"64px"} color={"#000"}>
+          <Box w={{ base: "100%", sm: "80%", md: "60%", lg: "50%" }}>
+            <Text    
+              mb={{ base: "12px", lg: "18px" }}
+        fontWeight={700}
+        fontSize={{ base: "36px", lg: "64px" }}
+        color={"#000"}
+        >
               Recent Post
             </Text>
-            <Text fontSize={20} fontWeight={400} color={"#888"}>
+            <Text   fontSize={{ base: "14px", lg: "20px" }}
+        fontWeight={400}
+        color={"#888"}>
               A thesis-driven blockchain-focused venture fund strategically
               investing in pre-seed and seed companies we lead, co-investments
               and bring our invaluable expertise to our portfolio projects to

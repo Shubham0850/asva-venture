@@ -12,7 +12,7 @@ function AmaAndPodcast() {
   ];
 
   return (
-    <Box background={"#fff"}>
+    <Box background={"#fff"} pt={'105px'}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
         <Container maxW={1300} padding="0px 50px">
           <Box w={"80%"}>

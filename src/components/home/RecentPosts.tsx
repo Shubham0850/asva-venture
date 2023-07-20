@@ -38,14 +38,14 @@ function RecentPosts() {
             color={"#4C545A"}
             textTransform={"uppercase"}
             fontWeight={800}
-            fontSize={24}
+            fontSize={{base:'20px',md:'24px'}}
           >
             Recent post
           </Text>
 
           <Link href="/recent-post">
             <Flex alignItems={"center"}>
-              <Text color="#4C545A" fontSize={20} fontWeight={500}>
+              <Text color="#4C545A" fontSize={{base:'16px',md:'20px'}} fontWeight={500}>
                 See all
               </Text>
               <GoArrowRight
