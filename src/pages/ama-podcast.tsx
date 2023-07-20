@@ -33,9 +33,9 @@ function AmaAndPodcast() {
               AI use cases in DeFi
             </Text>
 
-            <Text className="Hidden">
+            <Text className="Hidden" fontSize='14px' font-family='Power Grotesk Trial' color= '#888'>
               A thesis-driven blockchain-focused venture fund strategically
-              investing in pre-seed and seed companies we lead, co-investments
+              investing in pre-seed and seed companies we lead, co-investments
               and bring our invaluable expertise to our portfolio projects to
               grow beyond.
             </Text>
@@ -63,8 +63,8 @@ function AmaAndPodcast() {
         </Container>
       </Box>
 
-      <Container maxW={1300} py={20}>
-        <Box borderBottom="1px solid black">
+      <Container maxW={1300} p={'0px 25px'} >
+        <Box borderBottom="1px solid black" >
           {podcastData.map((podcast, index) => {
             const {
               type,

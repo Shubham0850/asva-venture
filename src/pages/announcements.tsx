@@ -2,6 +2,7 @@ import { Box, Container, Text } from "@chakra-ui/react";
 import Featured from "@/components/Announcements/Featured";
 import Latest from "@/components/Announcements/Latest";
 import React from "react";
+import Subscribe from "@/components/common/Subscribe";
 
 function Announcements() {
   return (
@@ -24,6 +25,7 @@ function Announcements() {
 
       <Featured />
       <Latest />
+      <Subscribe/>
     </Box>
   );
 }

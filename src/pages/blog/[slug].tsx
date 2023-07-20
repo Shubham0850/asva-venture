@@ -21,13 +21,13 @@ function Blog() {
   return (
     <Box pt={'105px'}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
-        <Container maxW={1300}>
-          <Box w={"80%"}>
+        <Container maxW={1300} p='0px 25px'>
+          <Box  w={{ base: "100%", md: "80%" }} >
             <Text
               fontFamily={" Space Grotesk"}
               mb={"18px"}
               fontWeight={700}
-              fontSize={"64px"}
+              fontSize={{base:'36px',md:'64px'}}
               color={"#000"}
             >
               Crypto{" "}
@@ -37,7 +37,7 @@ function Blog() {
               : relaunched and expanded
             </Text>
 
-            <Flex gap={2} mt={"25px"}>
+            <Flex gap={4} mt={"25px"} wrap={'wrap'}>
               {tags.map((tag, index) => {
                 return (
                   <Tag
@@ -66,26 +66,29 @@ function Blog() {
           </Box>
         </Container>
       </Box>
-      <Container maxW={1300} py={20}>
-        <Box>
+      <Container maxW={1300} py={20} p='0px 25px'>
+        <Box pt='40px'>
           <Flex justifyContent={"space-between"}>
-            <Text>February 14,2023 . 4 minutes</Text>
-            <Button
+            <Text  >February 14,2023 . 4 minutes</Text>
+            <Box className="hidden"> 
+             <Button
               color={"#4C545A"}
               border={"0.5px solid #4C545A"}
               rounded={"full"}
               gap={2}
+              fontSize={'20px'}
             >
-              share
-            </Button>
+              Share
+            </Button></Box>
+          
           </Flex>
         </Box>
 
-        <Box px={32} py={8}>
-          <Text py={4}>AI use cases in DeFi</Text>
-          <Text>
-            <p style={{paddingBottom:'38px'}}>
-              We’re thrilled to announce that we are relaunching Crypto Startup
+        <Box px={{ base: "16px", md: "32px" }} py={8} w={{ base: "100%", md: "80%" }} mx="auto">
+          <Text py={4} fontSize={{ base: "24px", md: "32px" }}  className="titleai">AI use cases in DeFi</Text>
+          <Text fontSize={{ base: "16px", md: "20px" }}>
+            <Text pb={{ base: "20px", md: "38px" }} className="crypto">
+              We are thrilled to announce that we are relaunching Crypto Startup
               School and expanding it into a full accelerator program. We
               launched in February 2020 with the goal of helping builders get
               started on new web3 projects. Over seven weeks, we coached teams
@@ -94,30 +97,30 @@ function Blog() {
               strategy, operational best practices, and more.
 
              The 40 founders in
-              that cohort went on to build some of the industry’s leading
+              that cohort went on to build some of the industrys leading
               companies They have raised over $300M in venture funding and built
               products that users love from the program has been viewed over 1M
               times by people interested in building web3 projects.
               
-              </p>
-              <p style={{paddingBottom:'38px'}}> The rapidly
+              </Text>
+              <Text pb={{ base: "20px", md: "38px" }} className="crypto"> The rapidly
               since then, even by technology standards, and yet the tools
               necessary to build an enduring web3 product are still poorly
               defined and distributed. This is particularly true for new
               founders entering the space from other fields who are compelled by
-              the promise of web3 – a more open internet – but aren’t sure how
-              to navigate the terrain. We’ve seen accelerator programs provide
+              the promise of web3  a more open internet  but are not sure how
+              to navigate the terrain. We have seen accelerator programs provide
               this type of launchpad successfully in other tech categories for
               many years. However, none are tailored to the specific needs of
               web3 founders, who require a novel set of tools and resources as
               they scale.
-            </p>
+            </Text>
           </Text>
       
         </Box>
         <Divider borderColor={"black"} />
 
-        <Box>
+        <Box pt={'28px'} pb={'165px'}>
           <Text color={"#4C545A"} fontSize={20} py={2} fontWeight={500}>
             Share:{" "}
           </Text>
