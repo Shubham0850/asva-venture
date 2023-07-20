@@ -73,7 +73,7 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
 const Section = () => {
   return (
     <Box bg="#1F1F1F" py={"50px"}>
-      <Container maxW={1400} padding="0px 50px">
+      <Container maxW={1400} padding="0px 25px">
         <Box>
           <Heading
             color="white"
@@ -88,6 +88,7 @@ const Section = () => {
           </Heading>
           <Flex
             mb={20}
+            gap={6}
             justifyContent="space-between"
             flexDirection={{ base: "column", md: "row" }}
           >

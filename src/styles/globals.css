@@ -19,7 +19,7 @@
 
 /* Subscribe section */
 .subscribe-input {
-  width: 50%;
+ 
   border: 1px solid;
   border-image: linear-gradient(
       to right,
@@ -39,9 +39,30 @@
   .hidden {
     display: none;
   }
+  .input{
+    display: flex;
+width: 382px;
+height: 40px;
+padding: 11px 242px 12px 16px;
+align-items: center;
+flex-shrink: 0;
+  }
 }
 
 .border {
   border-top: 1px solid #898889;
   border-style: dashed;
+}
+
+/* hidden podcast content in wide range */
+
+
+@media (min-width: 767px) {
+  .Hidden {
+    display: none;
+  }
+
+  .subscribe-input{
+    width: 50%;
+  }
 }

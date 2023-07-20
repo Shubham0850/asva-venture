@@ -5,18 +5,19 @@ import { AnnouncementData } from "@/data/announcementData";
 
 function Featured() {
   return (
-    <Container maxW={1300} padding="0px 50px">
+    <Container maxW={1300} padding="0px 25px">
       <Box background={"#fff"}>
         <Text
+        pt={'20px'}
           color="#4C545A"
-          fontSize="24px"
+          fontSize={{base:'20px',md:'24px'}}
           fontWeight="700"
           textTransform="uppercase"
         >
           Featured
         </Text>
-        <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
-          <Flex alignItems={"center"} wrap={"wrap"} gap={6}>
+        <Box py={10}  borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
+          <Flex alignItems={"center"} direction={{base:'column',md:"row"}} gap={6}>
             {AnnouncementData.map((announcementData, index) => {
               const { title, date, tags, name, link } = announcementData;
               return (

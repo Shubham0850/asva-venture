@@ -10,7 +10,7 @@ function Hero() {
         maxW={1300}
         position={"relative"}
         zIndex={2}
-        padding="0px 50px"
+        padding="0px 25px"
       >
         <Box
           pt={["90px", "130px"]}
