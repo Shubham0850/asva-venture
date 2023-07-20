@@ -27,7 +27,7 @@ function PodcastCard({
   facebookLink,
 }: PodcastCardProps) {
   return (
-    <Box width={"100%"} className="border" py={6}  >
+    <Box className="border"  py={10} >
       <Flex justifyContent={"space-between"}>
         <Box>
           <Text color={"#4C545A"} fontSize={16} fontFamily={"PowerGrotesk"}>
@@ -49,7 +49,7 @@ function PodcastCard({
               return (
                 <Text
                   key={index}
-                  fontSize={14}
+                  fontSize={{base:'12px',md:'14px'}}
                   color={"#8C9295"}
                   textTransform={"uppercase"}
                   fontWeight={500}
@@ -83,7 +83,8 @@ function PodcastCard({
           </Flex>
         </Box>
 
-        <Flex alignItems={"center"} gap={3}>
+      <Box className="hidden">
+          <Flex  alignItems={"center"} gap={3}>
           <Text color={"#4C545A"} fontSize={20} fontWeight={500}>
             Share:{" "}
           </Text>
@@ -101,11 +102,36 @@ function PodcastCard({
           <BsFacebook style={{ color: "#4C545A", fontSize: 20 }} />
           <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
         </Flex>
+
+        </Box>
       </Flex>
        
-      <Box p={10}>
-        <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="352"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
+      <Box p={4}>
+        <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="200px"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
       </Box>
+
+      <Box className="Hidden">
+
+      <Flex alignItems={"center"}  gap={3}>
+          <Text color={"#4C545A"} fontSize={20} fontWeight={500}>
+            Share:{" "}
+          </Text>
+          <Button
+            color={"#4C545A"}
+            border={"0.5px solid #4C545A"}
+            rounded={"full"}
+            gap={2}
+          >
+            <FiCopy style={{ fontSize: 20 }} />
+            <Text fontSize={14}>Copy link</Text>
+          </Button>
+           
+          <BsTwitter style={{ color: "#4C545A", fontSize: 20 }} />
+          <BsFacebook style={{ color: "#4C545A", fontSize: 20 }} />
+          <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
+        </Flex>
+      </Box>
+
     </Box>
   );
 }

@@ -66,3 +66,26 @@ flex-shrink: 0;
     width: 50%;
   }
 }
+
+
+/* page crypto startup  */
+
+.titleai{
+  color: #4C545A;
+font-family: Power Grotesk Trial;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 100% */
+text-transform: capitalize;
+}
+
+.crypto{
+  color: #888;
+text-align: justify;
+
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 30px */
+}

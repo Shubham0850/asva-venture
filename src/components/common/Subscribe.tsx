@@ -12,7 +12,7 @@ import React from "react";
 function Subscribe() {
   return (
     <Box bg={"#fff"} pb={"100px"}>
-      <Container maxW={1300} py={"125px"} bg={" #F8F8F8"} rounded={"15px"}>
+      <Container maxW={1300} py={"125px"} px={'25px'} bg={" #F8F8F8"} rounded={"15px"}>
         <Box mx="auto">
           <Flex direction="column" alignItems="center" textAlign="center">
             <Heading
