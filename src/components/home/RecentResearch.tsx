@@ -10,7 +10,7 @@ function RecentResearch() {
       <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
-            RESEARCH BLOGS - Datadriven Market Analysis
+            RESEARCH BLOGS <span className="hidden">- Datadriven Market Analysis</span>
           </Text>
 
           <Link href="#">

@@ -10,7 +10,7 @@ function RecentAnnouncement() {
       <Container maxW={1300} padding="0px 50px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
-            ANNOUNCEMENTS – Explore About News
+            ANNOUNCEMENTS <span className="hidden">– Explore About News</span>
           </Text>
 
           <Link href="/announcements">
