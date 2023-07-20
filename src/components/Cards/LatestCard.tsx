@@ -26,9 +26,9 @@ function LatestCard({
 }: LatestCardProps) {
   return (
     <Box width={"100%"} className="border" py={6}>
-      <Flex justifyContent={"space-between"}>
-        <Box width={"25%"}>
-          <Text color={"#4C545A"} fontSize={16} fontFamily={"PowerGrotesk"}>
+      <Flex justifyContent={"space-between"} flexDirection={{base:'column'}}>
+        <Box width={{ base: "100%", md: "25%" }}>
+          <Text color={"#4C545A"} fontSize={'16px'}  fontFamily={"PowerGrotesk"}>
             {type} / {date}
           </Text>
 
@@ -46,9 +46,9 @@ function LatestCard({
           </Flex>
         </Box>
 
-        <Box width={"75%"}>
+        <Box width={{base:"100%",md:'75%'}}>
           <Text
-            fontSize={24}
+            fontSize={{base:'20px', md:'24px'}}
             color={"#4C545A"}
             fontWeight={500}
             mb={2}
@@ -77,17 +77,19 @@ function LatestCard({
             })}
           </Flex>
 
-          <Flex gap={2} mt={3}>
+          <Flex  gap={{ base: 1, md: 2 }} mt={3} >
             {tags.map((tag, index) => {
               return (
                 <Tag
                   key={index}
-                  size={"sm"}
+                  size={{ base: "sm", md: "md" }}
                   variant="solid"
                   background="#6EFE96"
                   color={"#1F1F1F"}
                   rounded={"full"}
-                  padding={"2px 12px"}
+                  padding={{ base: "2px 8px", md: "2px 12px" }}
+                  fontSize={{ base: "11px", md: "14px" }}
+
                 >
                   {tag}
                 </Tag>
