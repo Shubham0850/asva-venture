@@ -45,3 +45,12 @@
   border-top: 1px solid #898889;
   border-style: dashed;
 }
+
+/* hidden podcast content in wide range */
+
+
+@media (min-width: 767px) {
+  .Hidden {
+    display: none;
+  }
+}

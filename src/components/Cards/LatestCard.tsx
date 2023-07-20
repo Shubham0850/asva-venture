@@ -26,7 +26,7 @@ function LatestCard({
 }: LatestCardProps) {
   return (
     <Box width={"100%"} className="border" py={6}>
-      <Flex justifyContent={"space-between"} flexDirection={{base:'column'}}>
+      <Flex justifyContent={"space-between"} flexDirection={{base:'column',md:'row'}}>
         <Box width={{ base: "100%", md: "25%" }}>
           <Text color={"#4C545A"} fontSize={'16px'}  fontFamily={"PowerGrotesk"}>
             {type} / {date}

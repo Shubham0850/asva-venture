@@ -6,7 +6,7 @@ import Image from "next/image";
 function Footer() {
   return (
     <Box backgroundColor={"#1A1A1A"}>
-      <Container maxW={1300} padding="0px 50px">
+      <Container maxW={1300} padding="0px 25px">
         <Box>
           <Flex
             py={20}
@@ -33,22 +33,22 @@ function Footer() {
                 direction={{ base: "row", md: "row" }}
               >
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                  <Text fontSize={'20px'} fontFamily={"PowerGrotesk"}>
                     Home
                   </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                  <Text fontSize={'20px'} fontFamily={"PowerGrotesk"}>
                     Insights
                   </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                  <Text fontSize={ "20px"} fontFamily={"PowerGrotesk"}>
                     Career
                   </Text>
                 </Link>
                 <Link href={"#"}>
-                  <Text fontSize={["16px", "20px"]} fontFamily={"PowerGrotesk"}>
+                  <Text fontSize={ "20px"} fontFamily={"PowerGrotesk"}>
                     About
                   </Text>
                 </Link>
@@ -124,11 +124,11 @@ function Footer() {
               <span className="hidden">Asvaventures © </span>2022 All rights
               reserved
             </Text>
-            <Text fontSize={["12px", "14px"]} letterSpacing={"-1px"}>
+            <Text fontSize={["12px", "16px"]} letterSpacing={"-1px"}>
               {" "}
               <Link href={"#"}>Terms Of Use</Link>
             </Text>
-            <Text fontSize={["12px", "14px"]} letterSpacing={"-1px"}>
+            <Text fontSize={["12px", "16px"]} letterSpacing={"-1px"}>
               {" "}
               <Link href={"#"}>Privacy Policy</Link>
             </Text>
