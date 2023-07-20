@@ -32,7 +32,7 @@ function RecentPosts() {
 
       <Box className="border" />
 
-      <Container maxW={1300} padding="0px 50px">
+      <Container maxW={1300} padding="0px 25px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text
             color={"#4C545A"}

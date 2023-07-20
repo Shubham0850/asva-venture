@@ -7,7 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 function RecentResearch() {
   return (
     <Box background={"#F8F8F8"} pb={100} className="border">
-      <Container maxW={1300} padding="0px 50px">
+      <Container maxW={1300} padding="0px 25px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text color={"#4C545A"} fontWeight={{base:700,md:800}} fontSize={{base:'20px',md:'24px'}}>
             RESEARCH BLOGS <span className="hidden">- Datadriven Market Analysis</span>

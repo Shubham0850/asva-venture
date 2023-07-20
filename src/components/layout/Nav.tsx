@@ -15,7 +15,7 @@ function NavBar() {
         >
           {/* Logo */}
 
-          <Link href="/" p="0px">
+          <Link href="/" p="0px" width={{base:'108px',md:'130px'}} height={{base:'61px',md:'73px'}}>
             <img src="/asva-venture-logo.svg" alt="asva-venture logo" />
           </Link>
 

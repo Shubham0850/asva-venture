@@ -29,7 +29,7 @@ function RecentCard({
         <Box>
           <Text
             color={"#4C545A"}
-            fontSize={24}
+            fontSize={{base:'20px', md:'24px'}}
             fontFamily={"PowerGrotesk"}
             fontWeight={500}
             mb={2}
@@ -62,7 +62,8 @@ function RecentCard({
 
         <Link href={"#"}>
           <HiOutlineArrowUpRight
-            style={{ fontSize: 32, color: "#4C545A", marginLeft: 5 }}
+            style={{ fontSize:32, color: "#4C545A", marginLeft: 5 }}
+            
           />
         </Link>
       </Flex>

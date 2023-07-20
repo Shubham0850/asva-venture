@@ -113,7 +113,7 @@ function Footer() {
             align="center"
             justify={"center"}
             gap={10}
-            p="30px"
+            py={8}
           >
             <Text
               fontSize={["12px", "16px"]}
