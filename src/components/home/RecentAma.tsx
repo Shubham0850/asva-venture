@@ -10,7 +10,7 @@ function RecentAma() {
       <Container maxW={1300} padding="0px 25px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text color={"#4C545A"} fontWeight={{base:700,md:800}} fontSize={{base:'20px',md:'24px'}}>
-            AMA & PODCASTS <span className="hidden">- Explore Industry Expert Insights</span>
+            Ama & Podcast<span className="hidden">- Explore Industry Expert Insights</span>
           </Text>
 
           <Link href="/ama-podcast">

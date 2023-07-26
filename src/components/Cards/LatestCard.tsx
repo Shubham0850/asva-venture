@@ -78,7 +78,7 @@ function LatestCard({
             })}
           </Flex>
 
-          <Flex  gap={{ base: 2, md: 2 }} mt={3} >
+          <Flex  gap={{ base: 2, md: 2 }} mt={3}  wrap={'wrap'}>
             {tags.map((tag, index) => {
               return (
                 <Tag
