@@ -2,6 +2,7 @@ import { Box, Button, Flex, Tag, Text } from "@chakra-ui/react";
 import React from "react";
 import { FiCopy } from "react-icons/fi";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { wrap } from "module";
 
 interface PodcastCardProps {
   type: string;
@@ -64,7 +65,7 @@ function PodcastCard({
             })}
           </Flex>
 
-          <Flex gap={2} mt={3}>
+          <Flex gap={2} mt={3} wrap={'wrap'}>
             {tags.map((tag, index) => {
               return (
                 <Tag

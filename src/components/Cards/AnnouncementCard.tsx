@@ -34,7 +34,7 @@ function AnnouncementCard({
         {title}
       </Text>
 
-      <Flex gap={2} mt={3} mb={"70px"}>
+      {/* <Flex gap={2} mt={3} mb={"70px"}>
         {tags.map((tag, index) => {
           return (
             <Tag
@@ -48,9 +48,9 @@ function AnnouncementCard({
             >
               {tag}
             </Tag>
-          );
-        })}
-      </Flex>
+           );
+        })} 
+      </Flex> */}
 
       <Flex fontSize={14}>
         <Text

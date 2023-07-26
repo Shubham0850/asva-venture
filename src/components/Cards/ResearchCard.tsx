@@ -36,6 +36,7 @@ function ResearchCard({
         fontFamily={"PowerGrotesk"}
         fontWeight={500}
         mb={2}
+      
       >
         {title}
       </Text>
@@ -45,6 +46,14 @@ function ResearchCard({
         fontFamily={"PowerGrotesk"}
         fontWeight={400}
         mb={"70px"}
+        maxH="5em" // Set the maximum height to 3 lines (adjust as needed)
+        overflow="hidden"
+        textOverflow="ellipsis"
+        display="-webkit-box"
+        style={{
+          WebkitLineClamp: 3, // Set the number of lines to show
+          WebkitBoxOrient: "vertical",
+        }}
       >
         {description}
       </Text>
