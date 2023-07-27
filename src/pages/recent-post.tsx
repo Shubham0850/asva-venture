@@ -1,4 +1,4 @@
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import Featured from "@/components/RecentPosts/Featured";
 import Latest from "@/components/RecentPosts/Latest";
 import { Box, Container, Text } from "@chakra-ui/react";

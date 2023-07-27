@@ -1,5 +1,5 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import { Box, Container, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
