@@ -1,15 +1,23 @@
 import { Container, Flex, Text, Link, Grid, Box } from "@chakra-ui/react";
-import { RecentResearchData } from "../../data/recentResearchData";
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ResearchCard from "../Cards/ResearchCard";
 import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import parse from "html-react-parser";
 
+interface Post {
+  title: string;
+  slug: string;
+  author: {
+    first_name: string;
+    last_name: string;
+  };
+  content: string;
+  date: string;
+}
 
 function RecentResearch() {
-
-  const [recentResearch, setRecentResearch] = useState([]);
+  const [recentResearch, setRecentResearch] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -34,13 +42,22 @@ function RecentResearch() {
     <Box background={"#F8F8F8"} pb={100} className="border">
       <Container maxW={1300} padding="0px 25px">
         <Flex justifyContent={"space-between"} py={10}>
-          <Text color={"#4C545A"} fontWeight={{base:700,md:800}} fontSize={{base:'20px',md:'24px'}}>
-            Research Blogs <span className="hidden">- Datadriven Market Analysis</span>
+          <Text
+            color={"#4C545A"}
+            fontWeight={{ base: 700, md: 800 }}
+            fontSize={{ base: "20px", md: "24px" }}
+          >
+            Research Blogs{" "}
+            <span className="hidden">- Datadriven Market Analysis</span>
           </Text>
 
           <Link href="#">
             <Flex alignItems={"center"}>
-              <Text color="#4C545A" fontSize={{base:'16px',md:'20px'}} fontWeight={500}>
+              <Text
+                color="#4C545A"
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={500}
+              >
                 See all
               </Text>
               <GoArrowRight
@@ -51,40 +68,38 @@ function RecentResearch() {
         </Flex>
 
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
-        {recentResearch.map((research, index) => {
-              console.log("research data: ", research);
+          {recentResearch.map((research, index) => {
+            console.log("research data: ", research);
 
-              const title = research.title;
-              const slug = research.slug;
-              const name = `${research.author.first_name} ${research.author.last_name}`;
-              const description = parse(research.content);
-              const originalDate = research.date;
-             
-               
-              // Create a new Date object with the original date string
-              const dateObj = new Date(originalDate);
+            const title = research.title;
+            const slug = research.slug;
+            const name = `${research.author.first_name} ${research.author.last_name}`;
+            const description = parse(research.content);
+            const originalDate = research.date;
 
-              // Define options for the date formatting
-              const options = {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              };
+            // Create a new Date object with the original date string
+            const dateObj = new Date(originalDate);
 
-              // Format the date using Intl.DateTimeFormat
-              const formattedDate = new Intl.DateTimeFormat(
-                "en-US",
-                options
-              ).format(dateObj);
+            // Define options for the date formatting
+            const options = {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            };
+
+            // Format the date using Intl.DateTimeFormat
+            const formattedDate = new Intl.DateTimeFormat(
+              "en-US",
+              // @ts-ignore
+              options
+            ).format(dateObj);
 
             return (
               <div key={index}>
                 <ResearchCard
-                  // category={category}
-                  
+                  category={"Category"}
                   title={title}
-                  // link={link}
-              
+                  link={`/blog/${slug}`}
                   description={description}
                   date={formattedDate}
                   writer={name}

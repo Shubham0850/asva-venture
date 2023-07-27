@@ -5,7 +5,7 @@ import { HiOutlineArrowUpRight } from "react-icons/hi2";
 
 interface RecenCardPropsType {
   bannerImg: string;
-  description: string;
+  description: string | JSX.Element | JSX.Element[];
   title: string;
   writer: string;
   date: string;
@@ -23,10 +23,10 @@ function RecentCard({
   return (
     <Box width={"100%"}>
       <Link href={postLink}>
-        <Image src={bannerImg} width={"100%"} height={'300px'} objectFit={'cover'} alt="banner" mb={"20px"} />
+        <Image src={bannerImg} width={"100%"} height={{base: "200px", md: "300px"}} objectFit={'cover'} alt="banner" mb={"20px"} />
       </Link>
       <Flex alignItems={"flex-start"}>
-        <Box>
+        <Box minW={"90%"}>
           <Text
             color={"#4C545A"}
             fontSize={{ base: "20px", md: "24px" }}
@@ -68,9 +68,9 @@ function RecentCard({
           </Flex>
         </Box>
 
-        <Link href={"#"}>
+        <Link href={postLink}>
           <HiOutlineArrowUpRight
-            style={{ fontSize: 32, color: "#4C545A", marginLeft: 5 }}
+            style={{ fontSize: 28, color: "#4C545A", marginLeft: 5 }}
           />
         </Link>
       </Flex>

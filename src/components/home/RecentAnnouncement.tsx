@@ -1,47 +1,69 @@
-import { Container, Flex, Text, Box, Grid, Link } from "@chakra-ui/react";
-import React from "react";
-import { AnnouncementData } from "../../data/announcementData";
-import AnnouncementCard from "../Cards/AnnouncementCard";
+import React, { useEffect, useState } from "react";
+import { Box, Container, Flex, Grid, Text, Link } from "@chakra-ui/react";
 import { GoArrowRight } from "react-icons/go";
-import { useState,useEffect } from "react";
 import axios from "axios";
-import parse from "html-react-parser";
+import AnnouncementCard from "../Cards/AnnouncementCard";
 
-function RecentAnnouncement() {
+interface Author {
+  first_name: string;
+  last_name: string;
+}
 
-  const [recentAnnouncement, setRecentAnnouncement] = useState([]);
-  const [loading, setLoading] = useState(false);
+interface Tag {
+  [key: string]: string;
+}
+
+interface Announcement {
+  title: string;
+  slug: string;
+  author: Author;
+  content: string;
+  date: string;
+  tags: Tag;
+}
+
+const RecentAnnouncement: React.FC = () => {
+  const [recentAnnouncement, setRecentAnnouncement] = useState<Announcement[]>(
+    []
+  );
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    async function fetchDetails() {
+    const fetchDetails = async () => {
       setLoading(true);
       try {
-        const _response = await axios.get(
+        const response = await axios.get(
           "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Announcement'"
         );
-        console.log({ _response });
-        setRecentAnnouncement(_response.data.posts);
+        setRecentAnnouncement(response.data.posts);
         setLoading(false);
       } catch (error) {
         console.log({ error });
         setLoading(false);
       }
-    }
+    };
     fetchDetails();
   }, []);
 
-
   return (
-    <Box background={"#F8F8F8"} pb={100} className="border">
+    <Box background="#F8F8F8" pb={100} className="border">
       <Container maxW={1300} padding="0px 25px">
-        <Flex justifyContent={"space-between"} py={10}>
-          <Text color={"#4C545A"} fontWeight={{base:700,md:800}} fontSize={{base:'20px',md:'24px'}}>
+        <Flex justifyContent="space-between" py={10}>
+          <Text
+            color="#4C545A"
+            fontWeight={{ base: 700, md: 800 }}
+            fontSize={{ base: "20px", md: "24px" }}
+          >
             Announcements <span className="hidden">– Explore About News</span>
           </Text>
 
           <Link href="/announcements">
-            <Flex alignItems={"center"}>
-              <Text color="#4C545A" fontSize={{base:'16px',md:'20px'}} fontWeight={500}>
+            <Flex alignItems="center">
+              <Text
+                color="#4C545A"
+                fontSize={{ base: "16px", md: "20px" }}
+                fontWeight={500}
+              >
                 See all
               </Text>
               <GoArrowRight
@@ -51,17 +73,19 @@ function RecentAnnouncement() {
           </Link>
         </Flex>
 
-        <Grid gap={6} templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}>
-        {recentAnnouncement.map((announcement, index) => {
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <Grid gap={6} templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}>
+            {recentAnnouncement.map((announcement, index) => {
               console.log("announcement data: ", announcement);
 
               const title = announcement.title;
               const slug = announcement.slug;
               const name = `${announcement.author.first_name} ${announcement.author.last_name}`;
-              const description = parse(announcement.content);
               const originalDate = announcement.date;
-             
-               
+              const tagsArray = Object.keys(announcement.tags);
+
               // Create a new Date object with the original date string
               const dateObj = new Date(originalDate);
 
@@ -75,25 +99,27 @@ function RecentAnnouncement() {
               // Format the date using Intl.DateTimeFormat
               const formattedDate = new Intl.DateTimeFormat(
                 "en-US",
+                // @ts-ignore
                 options
               ).format(dateObj);
 
-            return (
-              <div key={index}>
-                <AnnouncementCard
-                  title={title}
-                  date={formattedDate}
-                  name={name}
-                  // link={link}
-                  // tags={tags}
-                />
-              </div>
-            );
-          })}
-        </Grid>
+              return (
+                <div key={index}>
+                  <AnnouncementCard
+                    title={title}
+                    date={formattedDate}
+                    name={name}
+                    link={`/blog/${slug}`}
+                    tags={tagsArray}
+                  />
+                </div>
+              );
+            })}
+          </Grid>
+        )}
       </Container>
     </Box>
   );
-}
+};
 
 export default RecentAnnouncement;

@@ -1,4 +1,4 @@
-import Subscribe from "@/components/common/Subscribe";
+import Subscribe from "@/components/Common/Subscribe";
 import {
   Box,
   Button,

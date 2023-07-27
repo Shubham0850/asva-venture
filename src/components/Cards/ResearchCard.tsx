@@ -6,7 +6,7 @@ interface RecentResearchPropsType {
   category: string;
   title: string;
   link: string;
-  description: string;
+  description: string | JSX.Element | JSX.Element[];
   date: string;
   writer: string;
 }
@@ -73,7 +73,7 @@ function ResearchCard({
       </Flex>
 
       <Box position={"absolute"} top={"12px"} right={"12px"}>
-        <Link href={"#"}>
+        <Link href={link}>
           <HiOutlineArrowUpRight
             style={{ fontSize: 20, color: "#4C545A", marginLeft: 5 }}
           />

@@ -1,4 +1,5 @@
 import { Box, Container, Flex, Link, Divider } from "@chakra-ui/react";
+import { TbMenu } from "react-icons/tb";
 
 function NavBar() {
   return (
@@ -10,12 +11,17 @@ function NavBar() {
           justify="space-between"
           wrap="wrap"
           py="5px"
-          px={10}
+          px={2}
           color="white"
         >
           {/* Logo */}
 
-          <Link href="/" p="0px" width={{base:'108px',md:'130px'}} height={{base:'61px',md:'73px'}}>
+          <Link
+            href="/"
+            p="0px"
+            width={{ base: "108px", md: "130px" }}
+            height={{ base: "61px", md: "73px" }}
+          >
             <img src="/asva-venture-logo.svg" alt="asva-venture logo" />
           </Link>
 
@@ -78,6 +84,10 @@ function NavBar() {
               Portfolio
             </Link>
           </Flex>
+
+          <Box display={{ base: "flex", md: "none" }} >
+            <TbMenu style={{ color: "#1C1B1F", fontSize: 24 }} />
+          </Box>
         </Flex>
       </Container>
       <Divider borderColor={"#e3e4e5"} borderWidth="1px" />

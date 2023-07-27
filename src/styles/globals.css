@@ -17,9 +17,15 @@
   font-family: "PowerGrotesk", sans-serif;
 }
 
+.green-gradient-text {
+  background: linear-gradient(180deg, #81fe7c 0%, #1ed760 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Subscribe section */
 .subscribe-input {
- 
   border: 1px solid;
   border-image: linear-gradient(
       to right,
@@ -39,13 +45,13 @@
   .hidden {
     display: none;
   }
-  .input{
+  .input {
     display: flex;
-width: 382px;
-height: 40px;
-padding: 11px 242px 12px 16px;
-align-items: center;
-flex-shrink: 0;
+    width: 382px;
+    height: 40px;
+    padding: 11px 242px 12px 16px;
+    align-items: center;
+    flex-shrink: 0;
   }
 }
 
@@ -56,36 +62,34 @@ flex-shrink: 0;
 
 /* hidden podcast content in wide range */
 
-
 @media (min-width: 767px) {
   .Hidden {
     display: none;
   }
 
-  .subscribe-input{
+  .subscribe-input {
     width: 50%;
   }
 }
 
-
 /* page crypto startup  */
 
-.titleai{
-  color: #4C545A;
-font-family: Power Grotesk Trial;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 24px; /* 100% */
-text-transform: capitalize;
+.titleai {
+  color: #4c545a;
+  font-family: Power Grotesk Trial;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  text-transform: capitalize;
 }
 
-.crypto{
+.crypto {
   color: #888;
-text-align: justify;
+  text-align: justify;
 
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 150%; /* 30px */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
 }

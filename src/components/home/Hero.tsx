@@ -26,7 +26,12 @@ function Hero() {
             }}
             color={"#000"}
           >
-            We are backing <span style={{ color: "#80FF7D" }}>visionary</span>{" "}
+            We are backing{" "}
+            <span
+              className="green-gradient-text"
+            >
+              visionary
+            </span>{" "}
             founders Build on next-generation internet
           </Text>
 
@@ -49,17 +54,23 @@ function Hero() {
           <Button
             gap={2}
             mt={"50px"}
-            
-            backgroundColor="#80FF7D"
+            bg="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
             color="#111111"
             padding={["16px", "20px 24px"]}
             fontSize={["14px", "16px"]}
             rounded={0}
-            margin={""}
-         
+            fontFamily={"PowerGrotesk"}
+            fontWeight={"normal"}
+            letterSpacing={"1px"}
           >
             Talk with Us
-            <Icon className="blink" as={BsArrowRight} width={'20px'} height={'20px'} color={"#111111"} />
+            <Icon
+              className="blink"
+              as={BsArrowRight}
+              width={"20px"}
+              height={"20px"}
+              color={"#111111"}
+            />
           </Button>
         </Box>
       </Container>
@@ -67,6 +78,8 @@ function Hero() {
       <Image
         src="/heroBg.png"
         width={"90%"}
+        height={{base: "100vh", md: "100%"}}
+        objectFit={"cover"}
         position={"absolute"}
         top={[30, 0]}
         right={0}

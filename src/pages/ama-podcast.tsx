@@ -1,15 +1,41 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
-import Subscribe from "@/components/common/Subscribe";
-import { podcastData } from "@/data/podcastData";
-import { Box, Container, Divider, Flex, Tag, Text } from "@chakra-ui/react";
-import React from "react";
+import Subscribe from "@/components/Common/Subscribe";
+import { Box, Container, Text } from "@chakra-ui/react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+interface Post {
+  title: string;
+  slug: string;
+  author: {
+    first_name: string;
+    last_name: string;
+  };
+  categories: { [key: string]: string };
+  date: string;
+  tags: { [key: string]: string };
+}
 
 function AmaAndPodcast() {
-  const tags = [
-    "Policy & Regulation",
-    "Code & Engineering",
-    "What We’re Reading",
-  ];
+  const [recentAma, setRecentAma] = useState<Post[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    async function fetchDetails() {
+      setLoading(true);
+      try {
+        const _response = await axios.get(
+          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=10&category='AMA'"
+        );
+        setRecentAma(_response.data.posts);
+        setLoading(false);
+      } catch (error) {
+        console.log({ error });
+        setLoading(false);
+      }
+    }
+    fetchDetails();
+  }, []);
 
   return (
     <Box background={"#fff"} pt={"105px"}>
@@ -33,14 +59,19 @@ function AmaAndPodcast() {
               AI use cases in DeFi
             </Text>
 
-            <Text className="Hidden" fontSize='14px' font-family='Power Grotesk Trial' color= '#888'>
+            <Text
+              className="Hidden"
+              fontSize="14px"
+              font-family="Power Grotesk Trial"
+              color="#888"
+            >
               A thesis-driven blockchain-focused venture fund strategically
               investing in pre-seed and seed companies we lead, co-investments
               and bring our invaluable expertise to our portfolio projects to
               grow beyond.
             </Text>
 
-            <Box className="hidden">
+            {/* <Box className="hidden">
               <Flex gap={2} mt={"25px"}>
                 {tags.map((tag, index) => {
                   return (
@@ -58,43 +89,61 @@ function AmaAndPodcast() {
                   );
                 })}
               </Flex>
-            </Box>
+            </Box> */}
           </Box>
         </Container>
       </Box>
 
-      <Container maxW={1300} p={'0px 25px'} >
-        <Box borderBottom="1px solid black" >
-          {podcastData.map((podcast, index) => {
-            const {
-              type,
-              date,
-              title,
-              auther,
-              tags,
-              link,
-              twitterLink,
-              linkedINLink,
-              facebookLink,
-            } = podcast;
+      {loading ? (
+        <p>Loading....</p>
+      ) : (
+        <Container maxW={1300} p={"0px 25px"}>
+          {recentAma.map((post, index) => {
+            console.log("post data: ", post);
+
+            const title = post.title;
+            const slug = post.slug;
+            const name = `${post.author.first_name} ${post.author.last_name}`;
+            const category = Object.keys(post.categories)[0];
+
+            const originalDate = post.date;
+            const tagsArray = Object.keys(post.tags);
+
+            // Create a new Date object with the original date string
+            const dateObj = new Date(originalDate);
+
+            // Define options for the date formatting
+            const options = {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            };
+
+            // Format the date using Intl.DateTimeFormat
+            const formattedDate = new Intl.DateTimeFormat(
+              "en-US",
+              //@ts-ignore
+              options
+            ).format(dateObj);
+
             return (
               <div key={index}>
                 <PodcastCard
-                  type={type}
-                  date={date}
+                  type={category}
+                  date={formattedDate}
                   title={title}
-                  authors={auther}
-                  tags={tags}
-                  link={link}
-                  twitterLink={twitterLink}
-                  linkedInLink={linkedINLink}
-                  facebookLink={facebookLink}
+                  authors={[name]}
+                  tags={tagsArray}
+                  link={`/blog/${slug}`}
+                  twitterLink={"#"}
+                  linkedInLink={"#"}
+                  facebookLink={"#"}
                 />
               </div>
             );
           })}
-        </Box>
-      </Container>
+        </Container>
+      )}
       <Subscribe />
     </Box>
   );

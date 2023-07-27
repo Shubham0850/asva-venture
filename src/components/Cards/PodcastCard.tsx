@@ -107,13 +107,13 @@ function PodcastCard({
         </Box>
       </Flex>
        
-      <Box p={4}>
+      {/* <Box p={4}>
         <Text><iframe style={{borderRadius:'12px'}} src="https://open.spotify.com/embed/album/1s1hg0fDxYubOCjG5dJT4s?utm_source=generator" width="100%" height="200px"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></Text>
-      </Box>
+      </Box> */}
 
       <Box className="Hidden">
 
-      <Flex alignItems={"center"}  gap={3}>
+      <Flex alignItems={"center"}  gap={3} mt={{base: 10, md: 0}}>
           <Text color={"#4C545A"} fontSize={20} fontWeight={500}>
             Share:{" "}
           </Text>

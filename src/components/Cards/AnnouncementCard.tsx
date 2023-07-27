@@ -34,7 +34,7 @@ function AnnouncementCard({
         {title}
       </Text>
 
-      {/* <Flex gap={2} mt={3} mb={"70px"}>
+      <Flex gap={2} mt={3} mb={"70px"}>
         {tags.map((tag, index) => {
           return (
             <Tag
@@ -50,7 +50,7 @@ function AnnouncementCard({
             </Tag>
            );
         })} 
-      </Flex> */}
+      </Flex>
 
       <Flex fontSize={14}>
         <Text
@@ -67,7 +67,7 @@ function AnnouncementCard({
       </Flex>
 
       <Box position={"absolute"} top={"12px"} right={"12px"}>
-        <Link href={"#"}>
+        <Link href={link}>
           <HiOutlineArrowUpRight
             style={{ fontSize: 20, color: "#4C545A", marginLeft: 5 }}
           />

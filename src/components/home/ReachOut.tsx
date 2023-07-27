@@ -21,8 +21,13 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
     <Flex
       flex={1}
       flexDirection="column"
-      borderRight={isLast ? "none" : "1px dashed #4C545A"}
-      px={8}
+      borderRight={{ base: "none", md: isLast ? "none" : "1px dashed #4C545A" }}
+      borderBottom={{
+        base: isLast ? "none" : "1px dashed #4C545A",
+        md: "none",
+      }}
+      px={{base: 0, md: 8}}
+      pb={{base: 8, md: 0}}
     >
       <Image
         src={image}

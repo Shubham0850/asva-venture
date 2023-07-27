@@ -48,24 +48,25 @@ function Subscribe() {
                 best VC reads, and a lot more
               </Text>
             </Box>
-            <Flex gap={0} className="subscribe-input"  
+            <Flex
+              gap={0}
+              className="subscribe-input"
               mt={"50px"}
-            
               rounded={5}
-              overflow={"hidden"}>
+              overflow={"hidden"}
+              alignItems={"center"}
+            >
               <Input
-              
                 placeholder="What's your email"
                 rounded={0}
-               
-                fontSize={{base:'14px',md:'18px'}}
+                fontSize={{ base: "14px", md: "18px" }}
                 color={"#888"}
                 outline={"none"}
                 border={"none"}
                 focusBorderColor="transparent"
               />
               <Button
-               background="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%);"
+                background="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%);"
                 px={"32px"}
                 py={"24px"}
                 rounded={0}
