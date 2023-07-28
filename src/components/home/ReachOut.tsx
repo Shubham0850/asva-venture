@@ -112,22 +112,22 @@ const Section = () => {
               image="ellipse-1.svg"
               heading="Pitch Your Project"
               paragraph="Join the ranks of ambitious founders revolutionizing industries. We're eager to hear your disruptive proposal."
-              buttonText="Apply Now"
-              link="http://pitch.asvaventures.com/"
+              buttonText="Apply"
+              link="mailto:pitch@asvaventures.com"
             />
             <Card
               image="ellipse-2.svg"
               heading="Invest in our Fund"
-              paragraph="Are you a bold investor seeking groundbreaking opportunities that shape the future of technology? Join us, be a part of the wave shaping the decentralized world!"
+              paragraph="Are you a bold investor seeking groundbreaking opportunities that shape the future of technology? Join us, be a part of the wave shaping the world!"
               buttonText="Invest Now"
-              link="http://invest.asvaventures.com/"
+              link="mailto:invest@asvaventures.com"
             />
             <Card
               image="ellipse-3.svg"
               heading="Partner With us"
-              paragraph="Unleash the full potential of the decentralized internet through collaborative partnerships. Join us to amplify your impact and thrive in this groundbreaking ecosystem."
-              buttonText="Collaborate Now"
-              link="http://contact.asvaventures.com/"
+              paragraph="Unleash the full potential of the web3 through collaborative partnerships. Join us to amplify your impact and thrive in this groundbreaking ecosystem."
+              buttonText="Collab"
+              link="matilto:contact@asvaventures.com"
               isLast
             />
           </Flex>

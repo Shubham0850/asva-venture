@@ -54,7 +54,7 @@ function Hero() {
             companies
           </Text>
 
-          <Link href="http://pitch.asvaventures.com/">
+          <Link href="mailto:pitch@asvaventures.com">
             <Button
               gap={2}
               mt={"50px"}
@@ -68,7 +68,7 @@ function Hero() {
               letterSpacing={"1px"}
               _hover={{}}
             >
-              Talk with Us
+              Pitch Us
               <Icon
                 className="blink"
                 as={BsArrowRight}

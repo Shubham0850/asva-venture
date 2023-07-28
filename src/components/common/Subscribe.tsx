@@ -11,8 +11,14 @@ import React from "react";
 
 function Subscribe() {
   return (
-    <Box bg={"#fff"} pb={{base: "0px", md: "100px"}}>
-      <Container maxW={1300} py={"125px"} px={'25px'} bg={" #F8F8F8"} rounded={"15px"}>
+    <Box bg={"#fff"} pb={{ base: "0px", md: "100px" }}>
+      <Container
+        maxW={1300}
+        py={"125px"}
+        px={"25px"}
+        bg={" #F8F8F8"}
+        rounded={"15px"}
+      >
         <Box mx="auto">
           <Flex direction="column" alignItems="center" textAlign="center">
             <Heading
@@ -28,19 +34,15 @@ function Subscribe() {
             </Heading>
             <Box mb={4}>
               <Text
-                width={['100%','100%', "1000px"]}
+                width={["100%", "100%", "1000px"]}
                 height={"auto"}
                 fontWeight={400}
                 fontSize={["16px", "20px"]}
                 color={"#888888"}
               >
-                A monthly{" "}
-                <Text as="span" color="#0075FF">
-                  newsletter
-                </Text>{" "}
-                for web3 builders & investors. The only newsletter you need to
-                stay updated on web3 fundraising, major events & conferences,
-                best VC reads, and a lot more
+                Your comprehensive frequent digest for all things Web3! Stay
+                informed on impactful fundraising efforts, major industry
+                events, thought-provoking articles, and a lot more.
               </Text>
             </Box>
             <Flex
