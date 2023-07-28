@@ -1,10 +1,10 @@
 import { Box, Container, Text } from "@chakra-ui/react";
-import Featured from "@/components/Announcements/Featured";
-import Latest from "@/components/Announcements/Latest";
 import React from "react";
 import Subscribe from "@/components/common/Subscribe";
+import Featured from "@/components/Research/Featured";
+import Latest from "@/components/Research/Latest";
 
-function Announcements() {
+function Research() {
   return (
     <Box background={"#fff"} pt={"105px"}>
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
@@ -16,16 +16,16 @@ function Announcements() {
               fontSize={{ base: "36px", md: "64px" }}
               color={"#000"}
             >
-              Announcements
+              Research
             </Text>
             <Text
               fontSize={{ base: "14px", md: "20px" }}
               fontWeight={400}
               color={"#888"}
             >
-              Get the inside scoop on Asva Venture&apos;s progress, here we share
-              updates, news, and noteworthy developments, partnerships &
-              milestones.
+              Stay in the loop with our latest insights, thought leadership, and
+              informative content. Our Research section keeps you current on
+              industry developments and emerging trends.
             </Text>
           </Box>
         </Container>
@@ -38,4 +38,4 @@ function Announcements() {
   );
 }
 
-export default Announcements;
+export default Research;

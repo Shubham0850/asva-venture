@@ -6,6 +6,7 @@ import {
   Text,
   Button,
   Container,
+  Link,
 } from "@chakra-ui/react";
 
 type CardProps = {
@@ -14,9 +15,17 @@ type CardProps = {
   paragraph: string;
   buttonText: string;
   isLast?: boolean;
+  link: string;
 };
 
-const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
+const Card = ({
+  image,
+  heading,
+  paragraph,
+  buttonText,
+  isLast,
+  link,
+}: CardProps) => {
   return (
     <Flex
       flex={1}
@@ -26,8 +35,8 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
         base: isLast ? "none" : "1px dashed #4C545A",
         md: "none",
       }}
-      px={{base: 0, md: 8}}
-      pb={{base: 8, md: 0}}
+      px={{ base: 0, md: 8 }}
+      pb={{ base: 8, md: 0 }}
     >
       <Image
         src={image}
@@ -56,28 +65,30 @@ const Card = ({ image, heading, paragraph, buttonText, isLast }: CardProps) => {
       >
         {paragraph}
       </Text>
-      <Button
-        colorScheme="teal"
-        bgGradient="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
-        height="48px"
-        padding="20px 24px"
-        rounded={0}
-        size={"sm"}
-        width="min-content"
-        fontFamily={"PowerGrotesk"}
-        letterSpacing={"1px"}
-        fontWeight={"normal"}
-        color="black"
-      >
-        {buttonText}
-      </Button>
+      <Link href={link}>
+        <Button
+          colorScheme="teal"
+          bgGradient="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
+          height="48px"
+          padding="20px 24px"
+          rounded={0}
+          size={"sm"}
+          width="min-content"
+          fontFamily={"PowerGrotesk"}
+          letterSpacing={"1px"}
+          fontWeight={"normal"}
+          color="black"
+        >
+          {buttonText}
+        </Button>
+      </Link>
     </Flex>
   );
 };
 
 const Section = () => {
   return (
-    <Box bg="#1F1F1F" py={"50px"}>
+    <Box bg="#1F1F1F" py={"50px"} id="insights">
       <Container maxW={1400} padding="0px 25px">
         <Box>
           <Heading
@@ -89,7 +100,7 @@ const Section = () => {
             letterSpacing="1px"
             fontFamily={"PowerGrotesk"}
           >
-            Reach Out To Us
+            Get in Touch with Us
           </Heading>
           <Flex
             mb={20}
@@ -99,21 +110,24 @@ const Section = () => {
           >
             <Card
               image="ellipse-1.svg"
-              heading="Apply for Investment"
-              paragraph="Mentorship from industry experts to make sure you are ready for the growth"
+              heading="Pitch Your Project"
+              paragraph="Join the ranks of ambitious founders revolutionizing industries. We're eager to hear your disruptive proposal."
               buttonText="Apply Now"
+              link="http://pitch.asvaventures.com/"
             />
             <Card
               image="ellipse-2.svg"
-              heading="Invest in our fund"
-              paragraph="Mentorship from industry experts to make sure you are ready for the growth"
+              heading="Invest in our Fund"
+              paragraph="Are you a bold investor seeking groundbreaking opportunities that shape the future of technology? Join us, be a part of the wave shaping the decentralized world!"
               buttonText="Invest Now"
+              link="http://invest.asvaventures.com/"
             />
             <Card
               image="ellipse-3.svg"
-              heading="Or Collaboration"
-              paragraph="Mentorship from industry experts to make sure you are ready for the growth"
+              heading="Partner With us"
+              paragraph="Unleash the full potential of the decentralized internet through collaborative partnerships. Join us to amplify your impact and thrive in this groundbreaking ecosystem."
               buttonText="Collaborate Now"
+              link="http://contact.asvaventures.com/"
               isLast
             />
           </Flex>

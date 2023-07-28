@@ -1,4 +1,4 @@
-import { Container, Image } from "@chakra-ui/react";
+import { Container, Image, Link } from "@chakra-ui/react";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Box, Button, Text, Icon } from "@chakra-ui/react";
@@ -26,13 +26,16 @@ function Hero() {
             }}
             color={"#000"}
           >
-            We are backing{" "}
+            {/* We are backing{" "}
             <span
               className="green-gradient-text"
             >
               visionary
             </span>{" "}
-            founders Build on next-generation internet
+            founders Build on next-generation internet */}
+            A thesis-driven Web3 fund supporting{" "}
+            <span className="green-gradient-text">ambitious</span> founders
+            shaping the next iteration of the Internet
           </Text>
 
           <Text
@@ -45,40 +48,43 @@ function Hero() {
             }}
             color={"#888"}
           >
-            A thesis-driven blockchain-focused venture fund strategically
-            investing in pre-seed and seed companies we lead, co-investments and
-            bring our invaluable expertise to our portfolio projects to grow
-            beyond.
+            A venture fund focused on blockchain, strategically investing in
+            pre-seed and seed companies. We lead, as well as co-invest, while
+            leveraging our invaluable expertise to propel growth in portfolio
+            companies
           </Text>
 
-          <Button
-            gap={2}
-            mt={"50px"}
-            bg="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
-            color="#111111"
-            padding={["16px", "20px 24px"]}
-            fontSize={["14px", "16px"]}
-            rounded={0}
-            fontFamily={"PowerGrotesk"}
-            fontWeight={"normal"}
-            letterSpacing={"1px"}
-          >
-            Talk with Us
-            <Icon
-              className="blink"
-              as={BsArrowRight}
-              width={"20px"}
-              height={"20px"}
-              color={"#111111"}
-            />
-          </Button>
+          <Link href="http://pitch.asvaventures.com/">
+            <Button
+              gap={2}
+              mt={"50px"}
+              bg="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
+              color="#111111"
+              padding={["16px", "20px 24px"]}
+              fontSize={["14px", "16px"]}
+              rounded={0}
+              fontFamily={"PowerGrotesk"}
+              fontWeight={"normal"}
+              letterSpacing={"1px"}
+              _hover={{}}
+            >
+              Talk with Us
+              <Icon
+                className="blink"
+                as={BsArrowRight}
+                width={"20px"}
+                height={"20px"}
+                color={"#111111"}
+              />
+            </Button>
+          </Link>
         </Box>
       </Container>
 
       <Image
         src="/heroBg.png"
         width={"90%"}
-        height={{base: "100vh", md: "100%"}}
+        height={{ base: "100vh", md: "100%" }}
         objectFit={"cover"}
         position={"absolute"}
         top={[30, 0]}

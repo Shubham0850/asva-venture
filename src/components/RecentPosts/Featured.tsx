@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Box, Container, Grid, Text } from "@chakra-ui/react";
 import RecentCard from "../Cards/RecentCard";
 import axios from "axios";
-import { parse } from "path";
+import { dateFormate } from "../../../utils";
+import parse from "html-react-parser";
 
 interface Post {
   featured_image: string;
@@ -61,32 +62,12 @@ function Featured() {
         ) : (
           <Grid templateColumns={["1fr", "repeat(3, 1fr)"]} gap={10}>
             {recentPost.map((post, index) => {
-              console.log("post data: ", post);
-
               const featuredImg = post.featured_image;
               const title = post.title;
               const slug = post.slug;
               const name = `${post.author.first_name} ${post.author.last_name}`;
+              const formattedDate = dateFormate(post.date);
               const description = parse(post.content);
-
-              const originalDate = post.date;
-
-              // Create a new Date object with the original date string
-              const dateObj = new Date(originalDate);
-
-              // Define options for the date formatting
-              const options = {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              };
-
-              // Format the date using Intl.DateTimeFormat
-              const formattedDate = new Intl.DateTimeFormat(
-                "en-US",
-                // @ts-ignore
-                options
-              ).format(dateObj);
 
               return (
                 <div key={index}>
@@ -94,7 +75,7 @@ function Featured() {
                     writer={name}
                     date={formattedDate}
                     bannerImg={featuredImg}
-                    description={"desc"}
+                    description={description}
                     title={title}
                     postLink={`/blog/${slug}`}
                   />

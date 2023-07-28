@@ -4,6 +4,7 @@ import ResearchCard from "../Cards/ResearchCard";
 import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import parse from "html-react-parser";
+import { dateFormate } from "../../../utils";
 
 interface Post {
   title: string;
@@ -14,6 +15,7 @@ interface Post {
   };
   content: string;
   date: string;
+  tags: { [key: string]: string };
 }
 
 function RecentResearch() {
@@ -47,11 +49,11 @@ function RecentResearch() {
             fontWeight={{ base: 700, md: 800 }}
             fontSize={{ base: "20px", md: "24px" }}
           >
-            Research Blogs{" "}
-            <span className="hidden">- Datadriven Market Analysis</span>
+            Research Blogs
+            <span className="hidden">: Explore Data-Driven Web3</span>
           </Text>
 
-          <Link href="#">
+          <Link href="/research">
             <Flex alignItems={"center"}>
               <Text
                 color="#4C545A"
@@ -69,35 +71,17 @@ function RecentResearch() {
 
         <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
           {recentResearch.map((research, index) => {
-            console.log("research data: ", research);
-
             const title = research.title;
             const slug = research.slug;
             const name = `${research.author.first_name} ${research.author.last_name}`;
             const description = parse(research.content);
-            const originalDate = research.date;
-
-            // Create a new Date object with the original date string
-            const dateObj = new Date(originalDate);
-
-            // Define options for the date formatting
-            const options = {
-              day: "numeric",
-              month: "long",
-              year: "numeric",
-            };
-
-            // Format the date using Intl.DateTimeFormat
-            const formattedDate = new Intl.DateTimeFormat(
-              "en-US",
-              // @ts-ignore
-              options
-            ).format(dateObj);
+            const formattedDate = dateFormate(research.date);
+            const tagsArray = Object.keys(research.tags);
 
             return (
               <div key={index}>
                 <ResearchCard
-                  category={"Category"}
+                  category={tagsArray[0]}
                   title={title}
                   link={`/blog/${slug}`}
                   description={description}

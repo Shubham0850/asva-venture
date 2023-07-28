@@ -1,8 +1,9 @@
 import { Box, Container, Text, Grid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import AnnouncementCard from "../Cards/AnnouncementCard";
 import axios from "axios";
 import { dateFormate } from "../../../utils";
+import ResearchCard from "../Cards/ResearchCard";
+import parse from "html-react-parser";
 
 interface Post {
   title: string;
@@ -13,6 +14,7 @@ interface Post {
   };
   date: string;
   tags: { [key: string]: string };
+  content: string;
 }
 
 function Featured() {
@@ -24,7 +26,7 @@ function Featured() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Announcement'"
+          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Research'"
         );
         setRecentPost(_response.data.posts);
         setLoading(false);
@@ -52,21 +54,23 @@ function Featured() {
             <p>Loading....</p>
           ) : (
             <Grid templateColumns={["1fr", "repeat(3, 1fr)"]} gap={10}>
-              {recentPost.map((post, index) => {
-                const title = post.title;
-                const slug = post.slug;
-                const name = `${post.author.first_name} ${post.author.last_name}`;
-                const formattedDate = dateFormate(post.date);
-                const tagsArray = Object.keys(post.tags);
+              {recentPost.map((research, index) => {
+                const title = research.title;
+                const slug = research.slug;
+                const name = `${research.author.first_name} ${research.author.last_name}`;
+                const description = parse(research.content);
+                const formattedDate = dateFormate(research.date);
+                const tagsArray = Object.keys(research.tags);
 
                 return (
                   <div key={index}>
-                    <AnnouncementCard
+                    <ResearchCard
+                      category={tagsArray[0]}
                       title={title}
-                      date={formattedDate}
-                      name={name}
                       link={`/blog/${slug}`}
-                      tags={tagsArray}
+                      description={description}
+                      date={formattedDate}
+                      writer={name}
                     />
                   </div>
                 );

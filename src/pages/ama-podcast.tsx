@@ -1,5 +1,5 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import { Box, Container, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -51,24 +51,13 @@ function AmaAndPodcast() {
               Podcasts
             </Text>
             <Text
-              fontSize={30}
-              fontWeight={700}
-              className="hidden"
-              color={"#4C545A"}
+              fontSize={{ base: "14px", md: "20px" }}
+              fontWeight={400}
+              color={"#888"}
             >
-              AI use cases in DeFi
-            </Text>
-
-            <Text
-              className="Hidden"
-              fontSize="14px"
-              font-family="Power Grotesk Trial"
-              color="#888"
-            >
-              A thesis-driven blockchain-focused venture fund strategically
-              investing in pre-seed and seed companies we lead, co-investments
-              and bring our invaluable expertise to our portfolio projects to
-              grow beyond.
+              Our exclusive podcast series brings on the panel industry titans
+              and visionary founders. Gain unparalleled access to the minds
+              shaping the future of Web3.
             </Text>
 
             {/* <Box className="hidden">

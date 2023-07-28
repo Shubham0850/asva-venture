@@ -3,6 +3,7 @@ import { Box, Container, Flex, Grid, Text, Link } from "@chakra-ui/react";
 import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import AnnouncementCard from "../Cards/AnnouncementCard";
+import { dateFormate } from "../../../utils";
 
 interface Author {
   first_name: string;
@@ -54,7 +55,8 @@ const RecentAnnouncement: React.FC = () => {
             fontWeight={{ base: 700, md: 800 }}
             fontSize={{ base: "20px", md: "24px" }}
           >
-            Announcements <span className="hidden">– Explore About News</span>
+            Announcements
+            <span className="hidden">- Our Inside Scoop</span>
           </Text>
 
           <Link href="/announcements">
@@ -78,30 +80,11 @@ const RecentAnnouncement: React.FC = () => {
         ) : (
           <Grid gap={6} templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}>
             {recentAnnouncement.map((announcement, index) => {
-              console.log("announcement data: ", announcement);
-
               const title = announcement.title;
               const slug = announcement.slug;
               const name = `${announcement.author.first_name} ${announcement.author.last_name}`;
-              const originalDate = announcement.date;
               const tagsArray = Object.keys(announcement.tags);
-
-              // Create a new Date object with the original date string
-              const dateObj = new Date(originalDate);
-
-              // Define options for the date formatting
-              const options = {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              };
-
-              // Format the date using Intl.DateTimeFormat
-              const formattedDate = new Intl.DateTimeFormat(
-                "en-US",
-                // @ts-ignore
-                options
-              ).format(dateObj);
+              const formattedDate = dateFormate(announcement.date);
 
               return (
                 <div key={index}>

@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Text } from "@chakra-ui/react";
+import { Text, Box, Container, Grid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import LatestCard from "../Cards/LatestCard";
 import axios from "axios";
@@ -11,13 +11,12 @@ interface Post {
     first_name: string;
     last_name: string;
   };
-  categories: { [key: string]: string };
   date: string;
   tags: { [key: string]: string };
 }
 
 function Latest() {
-  const [latestPosts, setlatestPosts] = useState<Post[]>([]);
+  const [recentPost, setRecentPost] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -25,10 +24,9 @@ function Latest() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts"
+          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=10&category='Research'"
         );
-        console.log({ _response });
-        setlatestPosts(_response.data.posts);
+        setRecentPost(_response.data.posts);
         setLoading(false);
       } catch (error) {
         console.log({ error });
@@ -37,25 +35,29 @@ function Latest() {
     }
     fetchDetails();
   }, []);
+
   return (
-    <Box background={"#fff"} pb={100}>
-      <Container maxW={1300} padding="0px 50px">
-        <Box py={10}>
-          <Text color={"#4C545A"} fontWeight={800} fontSize={24}>
-            Latest
-          </Text>
-        </Box>
+    <Container maxW="1300" padding="50px 25px">
+      <Box background={"#fff"}>
+        <Text
+          pb={8}
+          color="#4C545A"
+          fontSize={{ base: "20px", md: "24px" }}
+          fontWeight="700"
+        >
+          Latest
+        </Text>
+
         {loading ? (
           <p>Loading....</p>
         ) : (
-          <Grid templateColumns={["1fr", "repeat(1, 1fr)"]} gap={16}>
-            {latestPosts.map((post, index) => {
+          <Grid templateColumns={["1fr", "repeat(1, 1fr)"]} gap={6}>
+            {recentPost.map((post, index) => {
               const title = post.title;
               const slug = post.slug;
               const name = `${post.author.first_name} ${post.author.last_name}`;
-              const category = Object.keys(post.categories)[0];
-              const tagsArray = Object.keys(post.tags);
               const formattedDate = dateFormate(post.date);
+              const tagsArray = Object.keys(post.tags);
 
               return (
                 <div key={index}>
@@ -65,15 +67,15 @@ function Latest() {
                     date={formattedDate}
                     tags={tagsArray}
                     authers={[name]}
-                    type={category}
+                    type={"Research"}
                   />
                 </div>
               );
             })}
           </Grid>
         )}
-      </Container>
-    </Box>
+      </Box>
+    </Container>
   );
 }
 

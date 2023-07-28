@@ -1,148 +1,222 @@
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import {
   Box,
   Button,
   Container,
   Flex,
   Text,
-  Divider,
   Tag,
+  Image,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
+import parse from "html-react-parser";
+import { useRouter } from "next/router";
+import { dateFormate } from "../../../utils";
+
+interface Data {
+  title: string;
+  tags: { [key: string]: string };
+  author?: {
+    first_name: string;
+    last_name: string;
+  };
+  date: string;
+  featured_image: string;
+  content: string;
+}
+
+function useFetchPostData(slug: any) {
+  const [data, setData] = useState<Data>();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/slug:${slug}`
+        );
+        console.log(response);
+        setData(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [slug]);
+
+  return { data, loading };
+}
 
 function Blog() {
-  const tags = [
-    "Policy & Regulation",
-    "Code & Engineering",
-    "What We’re Reading",
-  ];
+  const router = useRouter();
+  const { slug } = router.query;
+  const [currentLink, setCurrentLink] = useState("");
+  const { data, loading } = useFetchPostData(slug);
+
+  useEffect(() => {
+    const currentLink = encodeURIComponent(window.location.href);
+    setCurrentLink(currentLink);
+  }, []);
+  const handleTwitterShare = () => {
+    const tweetText = "Check out this link: " + currentLink;
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+
+    // Open the Twitter share intent in a new window
+    window.open(twitterShareUrl, "_blank");
+  };
+
+  const handleLinkedInShare = () => {
+    const linkedInShareUrl = `https://www.linkedin.com/shareArticle/?mini=true&url=${currentLink}`;
+
+    // Open the LinkedIn share intent in a new window
+    window.open(linkedInShareUrl, "_blank");
+  };
+
+  const copyToClipboard = () => {
+    const currentLink = window.location.href;
+
+    navigator.clipboard.writeText(currentLink).then(
+      () => {
+        // If the copy was successful, you can show a success message or perform any other action
+        alert("Link copied to clipboard!");
+      },
+      (err) => {
+        // If there was an error copying the link, you can handle it here
+        console.error("Could not copy link to clipboard:", err);
+      }
+    );
+  };
+
   return (
-    <Box pt={'105px'}>
-      <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
-        <Container maxW={1300} p='0px 25px'>
-          <Box  w={{ base: "100%", md: "80%" }} >
-            <Text
-              fontFamily={" Space Grotesk"}
-              mb={"18px"}
-              fontWeight={700}
-              fontSize={{base:'36px',md:'64px'}}
-              color={"#000"}
+    <>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        data && (
+          <Box pt={"105px"} bg={"#fff"}>
+            <Box
+              py={100}
+              borderBottom={"1px solid #ddd"}
+              borderStyle={"dashed"}
             >
-              Crypto{" "}
-              <Text as={"span"} color={"#0075FF"}>
-                Startup School
-              </Text>
-              : relaunched and expanded
-            </Text>
-
-            <Flex gap={4} mt={"25px"} wrap={'wrap'}>
-              {tags.map((tag, index) => {
-                return (
-                  <Tag
-                    key={index}
-                    size={"sm"}
-                    variant="solid"
-                    background="#6EFE96"
-                    color={"#1F1F1F"}
-                    rounded={"full"}
-                    padding={"2px 12px"}
+              <Container maxW={1300} p="0px 25px">
+                <Box w={{ base: "100%", md: "80%" }}>
+                  <Text
+                    //  fontFamily={"PowerGrotesk"}
+                    mb={"18px"}
+                    fontWeight={700}
+                    fontSize={{ base: "36px", md: "64px" }}
+                    color={"#000"}
+                    lineHeight={{ base: "40px", md: "70px" }}
                   >
-                    {tag}
-                  </Tag>
-                );
-              })}
-            </Flex>
-            <Text
-              color={"#7A7A7A"}
-              fontSize={"20px"}
-              fontWeight={500}
-           
-              py={4}
-            >
-              Phoenix Baker / Jeff Bannniker
-            </Text>
+                    {data.title}
+                  </Text>
+
+                  <Flex gap={4} mt={"25px"} wrap={"wrap"}>
+                    {Object.keys(data?.tags).map((tag, index) => {
+                      return (
+                        <Tag
+                          key={index}
+                          size={"sm"}
+                          variant="solid"
+                          background="#6EFE96"
+                          color={"#1F1F1F"}
+                          rounded={"full"}
+                          padding={"2px 12px"}
+                        >
+                          {tag}
+                        </Tag>
+                      );
+                    })}
+                  </Flex>
+                  <Text
+                    color={"#7A7A7A"}
+                    fontSize={"20px"}
+                    fontWeight={500}
+                    py={4}
+                  >
+                    {`${data?.author?.first_name} ${data?.author?.last_name}`}
+                  </Text>
+                </Box>
+              </Container>
+            </Box>
+            <Container maxW={1300} py={20} p="0px 25px">
+              <Box pt="40px">
+                <Flex
+                  justifyContent={"space-between"}
+                  flexDir={{ base: "column", md: "row" }}
+                >
+                  <Text mb={{ base: 5, md: 0 }}>{dateFormate(data.date)}</Text>
+                  <Flex alignItems={"center"} gap={3}>
+                    <Button
+                      color={"#4C545A"}
+                      border={"0.5px solid #4C545A"}
+                      rounded={"full"}
+                      gap={2}
+                      onClick={() => {
+                        copyToClipboard();
+                      }}
+                    >
+                      <FiCopy style={{ fontSize: 20 }} />
+                      <Text fontSize={14}>Copy link</Text>
+                    </Button>
+
+                    <Button
+                      onClick={handleTwitterShare}
+                      border={"0.5px solid #4C545A"}
+                      rounded={"full"}
+                    >
+                      <BsTwitter style={{ color: "#4C545A", fontSize: 20 }} />
+                    </Button>
+                    <Button
+                      onClick={handleLinkedInShare}
+                      border={"0.5px solid #4C545A"}
+                      rounded={"full"}
+                    >
+                      <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
+                    </Button>
+                  </Flex>
+                </Flex>
+              </Box>
+
+              <Box
+                px={{ base: "16px", md: "32px" }}
+                py={8}
+                w={{ base: "100%", md: "80%" }}
+                mx="auto"
+              >
+                <Text
+                  py={4}
+                  fontSize={{ base: "24px", md: "32px" }}
+                  lineHeight={"40px"}
+                >
+                  {data?.title}
+                </Text>
+                <Image
+                  src={data.featured_image}
+                  maxH={"500px"}
+                  width={"100%"}
+                  objectFit={"cover"}
+                  mb={"25px"}
+                />
+                <div className="content-box">
+                  <Text fontSize={{ base: "16px", md: "20px", color: "#888" }}>
+                    {parse(data?.content as string)}
+                  </Text>
+                </div>
+              </Box>
+            </Container>
+            <Subscribe />
           </Box>
-        </Container>
-      </Box>
-      <Container maxW={1300} py={20} p='0px 25px'>
-        <Box pt='40px'>
-          <Flex justifyContent={"space-between"}>
-            <Text  >February 14,2023 . 4 minutes</Text>
-            <Box className="hidden"> 
-             <Button
-              color={"#4C545A"}
-              border={"0.5px solid #4C545A"}
-              rounded={"full"}
-              gap={2}
-              fontSize={'20px'}
-            >
-              Share
-            </Button></Box>
-          
-          </Flex>
-        </Box>
-
-        <Box px={{ base: "16px", md: "32px" }} py={8} w={{ base: "100%", md: "80%" }} mx="auto">
-          <Text py={4} fontSize={{ base: "24px", md: "32px" }}  className="titleai">AI use cases in DeFi</Text>
-          <Text fontSize={{ base: "16px", md: "20px" }}>
-            <Text pb={{ base: "20px", md: "38px" }} className="crypto">
-              We are thrilled to announce that we are relaunching Crypto Startup
-              School and expanding it into a full accelerator program. We
-              launched in February 2020 with the goal of helping builders get
-              started on new web3 projects. Over seven weeks, we coached teams
-              on the fundamentals of building a web3 startup from the ground up,
-              including the underlying infrastructure, applications & business
-              strategy, operational best practices, and more.
-
-             The 40 founders in
-              that cohort went on to build some of the industrys leading
-              companies They have raised over $300M in venture funding and built
-              products that users love from the program has been viewed over 1M
-              times by people interested in building web3 projects.
-              
-              </Text>
-              <Text pb={{ base: "20px", md: "38px" }} className="crypto"> The rapidly
-              since then, even by technology standards, and yet the tools
-              necessary to build an enduring web3 product are still poorly
-              defined and distributed. This is particularly true for new
-              founders entering the space from other fields who are compelled by
-              the promise of web3  a more open internet  but are not sure how
-              to navigate the terrain. We have seen accelerator programs provide
-              this type of launchpad successfully in other tech categories for
-              many years. However, none are tailored to the specific needs of
-              web3 founders, who require a novel set of tools and resources as
-              they scale.
-            </Text>
-          </Text>
-      
-        </Box>
-        <Divider borderColor={"black"} />
-
-        <Box pt={'28px'} pb={'165px'}>
-          <Text color={"#4C545A"} fontSize={20} py={2} fontWeight={500}>
-            Share:{" "}
-          </Text>
-          <Flex alignItems={"center"} gap={3}>
-            <Button
-              color={"#4C545A"}
-              border={"0.5px solid #4C545A"}
-              rounded={"full"}
-              gap={2}
-            >
-              <FiCopy style={{ fontSize: 20 }} />
-              <Text fontSize={14}>Copy link</Text>
-            </Button>
-
-            <BsTwitter style={{ color: "#4C545A", fontSize: 20 }} />
-            <BsFacebook style={{ color: "#4C545A", fontSize: 20 }} />
-            <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
-          </Flex>
-        </Box>
-      </Container>
-      <Subscribe />
-    </Box>
+        )
+      )}
+    </>
   );
 }
 

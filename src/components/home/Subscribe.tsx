@@ -39,13 +39,7 @@ function Subscribe() {
                 fontSize={["16px", "20px"]}
                 color={"#888888"}
               >
-                A monthly{" "}
-                <Text as="span" color="#0075FF">
-                  newsletter
-                </Text>{" "}
-                for web3 builders & investors. The only newsletter you need to
-                stay updated on web3 fundraising, major events & conferences,
-                best VC reads, and a lot more
+                Your comprehensive frequent digest for all things Web3! Stay informed on impactful fundraising efforts, major industry events, thought-provoking articles, and a lot more. 
               </Text>
             </Box>
             <Flex

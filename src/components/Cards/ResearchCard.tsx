@@ -30,16 +30,25 @@ function ResearchCard({
         {category}
       </Text>
 
-      <Text
-        color={"#4C545A"}
-        fontSize={24}
-        fontFamily={"PowerGrotesk"}
-        fontWeight={500}
-        mb={2}
-      
-      >
-        {title}
-      </Text>
+      <Link href={link}>
+        <Text
+          color={"#4C545A"}
+          fontSize={24}
+          fontFamily={"PowerGrotesk"}
+          fontWeight={500}
+          mb={2}
+          maxH="5em" // Set the maximum height to 3 lines (adjust as needed)
+          overflow="hidden"
+          textOverflow="ellipsis"
+          display="-webkit-box"
+          style={{
+            WebkitLineClamp: 3, // Set the number of lines to show
+            WebkitBoxOrient: "vertical",
+          }}
+        >
+          {title}
+        </Text>
+      </Link>
       <Text
         color={"#8C9295"}
         fontSize={16}

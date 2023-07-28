@@ -45,7 +45,7 @@ function NavBar() {
               Home
             </Link>
             <Link
-              href="#"
+              href="/#insights"
               mr={4}
               color="#888888"
               _hover={{
@@ -55,20 +55,7 @@ function NavBar() {
               fontFamily={"PowerGrotesk"}
               fontWeight={500}
             >
-              About Us
-            </Link>
-            <Link
-              href="#"
-              mr={4}
-              color="#888888"
-              _hover={{
-                color: "black",
-                textDecoration: "none",
-              }}
-              fontFamily={"PowerGrotesk"}
-              fontWeight={500}
-            >
-              Resources
+              Insights
             </Link>
             <Link
               href="#"
@@ -83,9 +70,22 @@ function NavBar() {
             >
               Portfolio
             </Link>
+            <Link
+              href="#"
+              mr={4}
+              color="#888888"
+              _hover={{
+                color: "black",
+                textDecoration: "none",
+              }}
+              fontFamily={"PowerGrotesk"}
+              fontWeight={500}
+            >
+              About
+            </Link>
           </Flex>
 
-          <Box display={{ base: "flex", md: "none" }} >
+          <Box display={{ base: "flex", md: "none" }}>
             <TbMenu style={{ color: "#1C1B1F", fontSize: 24 }} />
           </Box>
         </Flex>

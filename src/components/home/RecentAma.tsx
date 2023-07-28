@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import LatestCard from "../Cards/LatestCard";
 import axios from "axios";
+import { dateFormate } from "../../../utils";
 
 interface Post {
   title: string;
@@ -43,7 +44,7 @@ const RecentAma: React.FC = () => {
   }, []);
 
   return (
-    <Box background={"#F8F8F8"} pb={100} className="border">
+    <Box background={"#F8F8F8"} pb={100} >
       <Container maxW={1300} padding="0px 25px">
         <Flex justifyContent={"space-between"} py={10}>
           <Text
@@ -51,8 +52,10 @@ const RecentAma: React.FC = () => {
             fontWeight={{ base: 700, md: 800 }}
             fontSize={{ base: "20px", md: "24px" }}
           >
-            Ama & Podcast
-            <span className="hidden">- Explore Industry Expert Insights</span>
+            AMA & Podcasts
+            <span className="hidden">
+              : Conversations with Visionary Builders
+            </span>
           </Text>
 
           <Link href="/ama-podcast">
@@ -76,31 +79,12 @@ const RecentAma: React.FC = () => {
         ) : (
           <Grid templateColumns={["1fr", "repeat(1, 1fr)"]} gap={16}>
             {recentAma.map((post, index) => {
-              console.log("post data: ", post);
-
               const title = post.title;
               const slug = post.slug;
               const name = `${post.author.first_name} ${post.author.last_name}`;
               const category = Object.keys(post.categories)[0];
-
-              const originalDate = post.date;
               const tagsArray = Object.keys(post.tags);
-
-              // Create a new Date object with the original date string
-              const dateObj = new Date(originalDate);
-
-              // Define options for the date formatting
-              const options: Intl.DateTimeFormatOptions = {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              };
-
-              // Format the date using Intl.DateTimeFormat
-              const formattedDate = new Intl.DateTimeFormat(
-                "en-US",
-                options
-              ).format(dateObj);
+              const formattedDate = dateFormate(post.date);
 
               return (
                 <div key={index}>

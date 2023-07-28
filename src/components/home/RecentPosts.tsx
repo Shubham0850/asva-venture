@@ -5,6 +5,7 @@ import { Box, Container, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
 import RecentCard from "../Cards/RecentCard";
+import { dateFormate } from "../../../utils";
 
 interface Post {
   featured_image: string;
@@ -73,7 +74,7 @@ function RecentPosts() {
             fontWeight={800}
             fontSize={{ base: "20px", md: "24px" }}
           >
-            Recent Post
+            Latest from Asva Ventures
           </Text>
 
           <Link href="/recent-post">
@@ -103,19 +104,7 @@ function RecentPosts() {
               const slug = post.slug;
               const name = `${post.author.first_name} ${post.author.last_name}`;
               const description = parse(post.content);
-
-              const originalDate = post.date;
-              const dateObj = new Date(originalDate);
-              const options = {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              };
-              const formattedDate = new Intl.DateTimeFormat(
-                "en-US",
-                // @ts-ignore
-                options
-              ).format(dateObj);
+              const formattedDate = dateFormate(post.date);
 
               return (
                 <div key={index}>

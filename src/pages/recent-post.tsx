@@ -1,4 +1,4 @@
-import Subscribe from "@/components/Common/Subscribe";
+import Subscribe from "@/components/common/Subscribe";
 import Featured from "@/components/RecentPosts/Featured";
 import Latest from "@/components/RecentPosts/Latest";
 import { Box, Container, Text } from "@chakra-ui/react";
@@ -25,10 +25,7 @@ function RecentPosts() {
               fontWeight={400}
               color={"#888"}
             >
-              A thesis-driven blockchain-focused venture fund strategically
-              investing in pre-seed and seed companies we lead, co-investments
-              and bring our invaluable expertise to our portfolio projects to
-              grow beyond.
+              Discover the latest from Asva Ventures. Explore a collection of our freshest insights, exciting news, and timely updates—all conveniently brought together in one place.
             </Text>
           </Box>
         </Container>

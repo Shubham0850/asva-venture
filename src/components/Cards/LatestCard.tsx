@@ -26,14 +26,20 @@ function LatestCard({
 }: LatestCardProps) {
   return (
     <Box width={"100%"} className="border" py={6}>
-      <Flex justifyContent={"space-between"} flexDirection={{base:'column',md:'row'}}>
-
-        <Flex width={{ base: "100%", md: "25%" }} flexDirection={{base:'row',md:'column'}} justifyContent={{base:'space-between',md:""}}>
-          <Text color={"#4C545A"} fontSize={'16px'}  fontFamily={"PowerGrotesk"}>
+      <Flex
+        justifyContent={"space-between"}
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <Flex
+          width={{ base: "100%", md: "25%" }}
+          flexDirection={{ base: "row", md: "column" }}
+          justifyContent={{ base: "space-between", md: "" }}
+        >
+          <Text color={"#4C545A"} fontSize={"16px"} fontFamily={"PowerGrotesk"}>
             {type} / {date}
           </Text>
 
-          <Flex gap={5} mt={{base:'0px',md:4}} >
+          <Flex gap={5} mt={{ base: "0px", md: 4 }}>
             {twitterLink && (
               <Link href={twitterLink} target="_blank">
                 <BsTwitter style={{ color: "#1D9BF0", fontSize: "32px" }} />
@@ -47,16 +53,18 @@ function LatestCard({
           </Flex>
         </Flex>
 
-        <Box width={{base:"100%",md:'75%'}} mt={{base:'10px',md:0}}>
-          <Text
-            fontSize={{base:'20px', md:'24px'}}
-            color={"#4C545A"}
-            fontWeight={500}
-            mb={2}
-            fontFamily={"PowerGrotesk"}
-          >
-            {title}
-          </Text>
+        <Box width={{ base: "100%", md: "75%" }} mt={{ base: "10px", md: 0 }}>
+          <Link href={link}>
+            <Text
+              fontSize={{ base: "20px", md: "24px" }}
+              color={"#4C545A"}
+              fontWeight={500}
+              mb={2}
+              fontFamily={"PowerGrotesk"}
+            >
+              {title}
+            </Text>
+          </Link>
 
           <Flex gap={5}>
             {authers.map((auther, index) => {
@@ -78,7 +86,7 @@ function LatestCard({
             })}
           </Flex>
 
-          <Flex  gap={{ base: 2, md: 2 }} mt={3}  wrap={'wrap'}>
+          <Flex gap={{ base: 2, md: 2 }} mt={3} wrap={"wrap"}>
             {tags.map((tag, index) => {
               return (
                 <Tag
@@ -90,7 +98,6 @@ function LatestCard({
                   rounded={"full"}
                   padding={{ base: "2px 8px", md: "2px 12px" }}
                   fontSize={{ base: "12px", md: "14px" }}
-
                 >
                   {tag}
                 </Tag>

@@ -17,6 +17,14 @@
   font-family: "PowerGrotesk", sans-serif;
 }
 
+p {
+  color: #4c545a;
+}
+
+.content-box p {
+  margin-bottom: 20px;
+}
+
 .green-gradient-text {
   background: linear-gradient(180deg, #81fe7c 0%, #1ed760 100%);
   background-clip: text;

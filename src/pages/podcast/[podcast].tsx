@@ -8,10 +8,8 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import React from "react";
-import { podcastData } from "@/data/podcastData";
-import PodcastCard from "@/components/Cards/PodcastCard";
-import Subscribe from "@/components/Common/Subscribe";
-import { BsBorder, BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import Subscribe from "@/components/common/Subscribe";
+import {  BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 
 const podcast = () => {
