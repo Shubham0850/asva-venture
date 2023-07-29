@@ -31,12 +31,12 @@ function AnnouncementCard({
           fontFamily={"PowerGrotesk"}
           fontWeight={500}
           mb={2}
-          maxH="5em" // Set the maximum height to 3 lines (adjust as needed)
+          maxH="5em" 
           overflow="hidden"
           textOverflow="ellipsis"
           display="-webkit-box"
           style={{
-            WebkitLineClamp: 2, // Set the number of lines to show
+            WebkitLineClamp: 2,
             WebkitBoxOrient: "vertical",
           }}
         >

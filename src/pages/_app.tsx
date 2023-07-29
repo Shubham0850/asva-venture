@@ -7,9 +7,9 @@ import Footer from "@/components/layout/Footer";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <Nav/>
+      <Nav />
       <Component {...pageProps} />
-      <Footer/>
+      <Footer />
     </ChakraProvider>
   );
 }

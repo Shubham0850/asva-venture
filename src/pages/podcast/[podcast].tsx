@@ -13,11 +13,6 @@ import {  BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FiCopy } from "react-icons/fi";
 
 const podcast = () => {
-  const tags = [
-    "Policy & Regulation",
-    "Code & Engineering",
-    "What We’re Reading",
-  ];
   return (
     <Box pt="105px">
       <Box py={100} borderBottom={"1px solid #ddd"} borderStyle={"dashed"}>
@@ -31,7 +26,7 @@ const podcast = () => {
             </Text>
 
             <Flex gap={2} mt={"25px"}>
-              {tags.map((tag, index) => {
+              {/* {tags.map((tag, index) => {
                 return (
                   <Tag
                     key={index}
@@ -45,7 +40,7 @@ const podcast = () => {
                     {tag}
                   </Tag>
                 );
-              })}
+              })} */}
             </Flex>
             <Text color={"#7A7A7A"} fontSize={"20px"} fontWeight={500} py={4}>
               Phoenix Baker / Jeff Bannniker

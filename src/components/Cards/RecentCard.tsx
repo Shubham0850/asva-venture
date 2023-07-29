@@ -23,7 +23,14 @@ function RecentCard({
   return (
     <Box width={"100%"}>
       <Link href={postLink}>
-        <Image src={bannerImg} width={"100%"} height={{base: "200px", md: "300px"}} objectFit={'cover'} alt="banner" mb={"20px"} />
+        <Image
+          src={bannerImg}
+          width={"100%"}
+          height={{ base: "200px", md: "300px" }}
+          objectFit={"cover"}
+          alt="banner"
+          mb={"20px"}
+        />
       </Link>
       <Flex alignItems={"flex-start"}>
         <Box minW={"90%"}>
@@ -42,12 +49,12 @@ function RecentCard({
             fontFamily={"PowerGrotesk"}
             fontWeight={400}
             mb={"16px"}
-            maxH="5em" // Set the maximum height to 3 lines (adjust as needed)
+            maxH="5em"
             overflow="hidden"
             textOverflow="ellipsis"
             display="-webkit-box"
             style={{
-              WebkitLineClamp: 3, // Set the number of lines to show
+              WebkitLineClamp: 3,
               WebkitBoxOrient: "vertical",
             }}
           >

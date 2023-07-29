@@ -26,14 +26,7 @@ function Hero() {
             }}
             color={"#000"}
           >
-            {/* We are backing{" "}
-            <span
-              className="green-gradient-text"
-            >
-              visionary
-            </span>{" "}
-            founders Build on next-generation internet */}
-            A thesis-driven Web3 fund supporting{" "}
+            A thesis-driven Web3 fund backing{" "}
             <span className="green-gradient-text">ambitious</span> founders
             shaping the next iteration of the Internet
           </Text>

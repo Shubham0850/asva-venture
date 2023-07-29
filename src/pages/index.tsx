@@ -11,22 +11,26 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Asva Ventures | We are backing visionary founders Build on next-generation internet</title>
+        <title>
+          A thesis-driven Web3 fund backing ambitious founders shaping the next
+          iteration of the Internet | Asva Ventures
+        </title>
         <meta
           name="description"
-          content="We are backing visionary founders Build on next-generation internet"
+          content="A thesis-driven Web3 fund backing ambitious founders shaping the next
+          iteration of the Internet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/asva.png" />
       </Head>
-      
-      <Hero/>
-      <RecentPosts/>
-      <RecentResearch/>
-      <RecentAnnouncement/>
-      <RecentAma/>
-      <ReachOut/>
-      <Subscribe/>
+
+      <Hero />
+      <RecentPosts />
+      <RecentResearch />
+      <RecentAnnouncement />
+      <RecentAma />
+      <ReachOut />
+      <Subscribe />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Subscribe from "@/components/common/Subscribe";
 import { Box, Container, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { API_ENDPOINT, ENV } from "../../api-config";
 
 interface Post {
   title: string;
@@ -25,7 +26,7 @@ function AmaAndPodcast() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=10&category='AMA'"
+          `${API_ENDPOINT}${ENV}/posts/?number=10&category='AMA'`
         );
         setRecentAma(_response.data.posts);
         setLoading(false);

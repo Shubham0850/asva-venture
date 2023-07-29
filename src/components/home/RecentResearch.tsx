@@ -5,6 +5,7 @@ import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import parse from "html-react-parser";
 import { dateFormate } from "../../../utils";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Post {
   title: string;
@@ -27,7 +28,7 @@ function RecentResearch() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Research'"
+          `${API_ENDPOINT}${ENV}/posts/?number=3&category='Research'`
         );
         console.log({ _response });
         setRecentResearch(_response.data.posts);

@@ -112,7 +112,7 @@ const Section = () => {
               image="ellipse-1.svg"
               heading="Pitch Your Project"
               paragraph="Join the ranks of ambitious founders revolutionizing industries. We're eager to hear your disruptive proposal."
-              buttonText="Apply"
+              buttonText="Apply Now"
               link="mailto:pitch@asvaventures.com"
             />
             <Card
@@ -126,7 +126,7 @@ const Section = () => {
               image="ellipse-3.svg"
               heading="Partner With us"
               paragraph="Unleash the full potential of the web3 through collaborative partnerships. Join us to amplify your impact and thrive in this groundbreaking ecosystem."
-              buttonText="Collab"
+              buttonText="Collaborate Now"
               link="matilto:contact@asvaventures.com"
               isLast
             />

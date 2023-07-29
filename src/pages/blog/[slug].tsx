@@ -15,6 +15,8 @@ import { FiCopy } from "react-icons/fi";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import { dateFormate } from "../../../utils";
+import { API_ENDPOINT, ENV } from "../../../api-config";
+import Head from "next/head";
 
 interface Data {
   title: string;
@@ -36,9 +38,8 @@ function useFetchPostData(slug: any) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/slug:${slug}`
+          `${API_ENDPOINT}${ENV}/posts/slug:${slug}`
         );
-        console.log(response);
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -100,6 +101,13 @@ function Blog() {
       ) : (
         data && (
           <Box pt={"105px"} bg={"#fff"}>
+            <Head>
+              <title>{data.title}</title>
+              <meta
+                name="description"
+                content={`${parse(data?.content as string)}`}
+              />
+            </Head>
             <Box
               py={100}
               borderBottom={"1px solid #ddd"}

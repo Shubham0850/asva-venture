@@ -4,6 +4,7 @@ import RecentCard from "../Cards/RecentCard";
 import axios from "axios";
 import { dateFormate } from "../../../utils";
 import parse from "html-react-parser";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Post {
   featured_image: string;
@@ -26,7 +27,7 @@ function Featured() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3"
+          `${API_ENDPOINT}${ENV}/posts/?number=3`
         );
         console.log({ _response });
         setRecentPost(_response.data.posts);

@@ -4,6 +4,7 @@ import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import AnnouncementCard from "../Cards/AnnouncementCard";
 import { dateFormate } from "../../../utils";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Author {
   first_name: string;
@@ -34,7 +35,7 @@ const RecentAnnouncement: React.FC = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Announcement'"
+          `${API_ENDPOINT}${ENV}/posts/?number=3&category='Announcement'`
         );
         setRecentAnnouncement(response.data.posts);
         setLoading(false);

@@ -6,6 +6,7 @@ import { GoArrowRight } from "react-icons/go";
 import Link from "next/link";
 import RecentCard from "../Cards/RecentCard";
 import { dateFormate } from "../../../utils";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Post {
   featured_image: string;
@@ -28,7 +29,7 @@ function RecentPosts() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=4"
+          `${API_ENDPOINT}${ENV}/posts/?number=4`
         );
         setRecentPost(response.data.posts);
         setLoading(false);

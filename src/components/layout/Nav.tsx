@@ -14,8 +14,6 @@ function NavBar() {
           px={2}
           color="white"
         >
-          {/* Logo */}
-
           <Link
             href="/"
             p="0px"
@@ -25,7 +23,6 @@ function NavBar() {
             <img src="/asva-venture-logo.svg" alt="asva-venture logo" />
           </Link>
 
-          {/* Links */}
           <Flex
             gap={20}
             display={{ base: "none", md: "flex" }}

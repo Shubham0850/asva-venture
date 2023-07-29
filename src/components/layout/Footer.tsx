@@ -1,9 +1,7 @@
 import { Box, Container, Divider, Flex, Image, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import {
-  BsDiscord,
   BsLinkedin,
-  BsMedium,
   BsTelegram,
   BsTwitter,
 } from "react-icons/bs";

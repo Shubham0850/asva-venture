@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import LatestCard from "../Cards/LatestCard";
 import axios from "axios";
 import { dateFormate } from "../../../utils";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Post {
   title: string;
@@ -25,9 +26,8 @@ function Latest() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts"
+          `${API_ENDPOINT}${ENV}/posts`
         );
-        console.log({ _response });
         setlatestPosts(_response.data.posts);
         setLoading(false);
       } catch (error) {

@@ -4,6 +4,7 @@ import axios from "axios";
 import { dateFormate } from "../../../utils";
 import ResearchCard from "../Cards/ResearchCard";
 import parse from "html-react-parser";
+import { API_ENDPOINT, ENV } from "../../../api-config";
 
 interface Post {
   title: string;
@@ -26,7 +27,7 @@ function Featured() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          "https://public-api.wordpress.com/rest/v1.1/sites/staging-55d8-asvaadmin.wpcomstaging.com/posts/?number=3&category='Research'"
+          `${API_ENDPOINT}${ENV}/posts/?number=3&category='Research'`
         );
         setRecentPost(_response.data.posts);
         setLoading(false);
