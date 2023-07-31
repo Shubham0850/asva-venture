@@ -7,9 +7,50 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 function Subscribe() {
+  const [email, setEmail] = useState(""); 
+  const [message, setMessage] = useState(""); 
+  const [loading, setLoading] = useState(false)
+
+  const handleSubscribe = () => {
+    setLoading(true)
+    // Step 3: Handle form submission
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (email === "" || !regex.test(String(email).toLowerCase())) {
+      setMessage("Please enter a valid email");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("api_key", "AghazFUFk4uDrDUsquEg");
+    formData.append("email", email);
+    formData.append("list", "ThA5aF2Lf06cHT892osZxndQ");
+
+    axios
+      .post("https://sendy.asvalabs.com/subscribe", formData, {
+        headers: { "Content-type": "application/x-www-form-urlencoded" },
+      })
+      .then((response) => {
+        const resData = response.data;
+        if (resData.includes(`You're already subscribed!`)) {
+          setMessage(`You're already subscribed!`);
+        }
+        if (resData.includes(`You're subscribed!`)) {
+          setMessage(`You're subscribed!`);
+        }
+        setEmail("")
+        setLoading(false)
+      })
+      .catch((error) => {
+        setLoading(false)
+        setMessage("Something went wrong!");
+      });
+  };
+
   return (
     <Box bg={"#F8F8F8"}>
       <Container maxW={1300} py={"125px"}>
@@ -58,6 +99,8 @@ function Subscribe() {
                 outline={"none"}
                 border={"none"}
                 focusBorderColor="transparent"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <Button
                 background="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%);"
@@ -68,11 +111,13 @@ function Subscribe() {
                 color={"#1F1F1F"}
                 fontFamily={"PowerGrotesk"}
                 fontWeight="400"
+                onClick={handleSubscribe}
               >
-                Subscribe Now
+                {loading ? "Submitting..." : "Subscribe Now"}
               </Button>
             </Flex>
           </Flex>
+          <Text color="#1F1F1F"  textAlign={"center"} >{message}</Text>
         </Box>
       </Container>
     </Box>
