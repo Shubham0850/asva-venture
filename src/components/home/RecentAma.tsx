@@ -96,8 +96,6 @@ const RecentAma: React.FC = () => {
                     tags={tagsArray}
                     authers={[name]}
                     type={category}
-                    spotifyLink={"#"}
-                    twitterLink={"#"}
                   />
                 </div>
               );

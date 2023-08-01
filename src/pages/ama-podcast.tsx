@@ -1,6 +1,6 @@
 import PodcastCard from "@/components/Cards/PodcastCard";
 import Subscribe from "@/components/common/Subscribe";
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { API_ENDPOINT, ENV } from "../../api-config";
@@ -20,13 +20,14 @@ interface Post {
 function AmaAndPodcast() {
   const [recentAma, setRecentAma] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     async function fetchDetails() {
       setLoading(true);
       try {
         const _response = await axios.get(
-          `${API_ENDPOINT}${ENV}/posts/?number=10&category='AMA'`
+          `${API_ENDPOINT}${ENV}/posts/?number=${5*1}&category='AMA'`
         );
         setRecentAma(_response.data.posts);
         setLoading(false);
@@ -36,7 +37,11 @@ function AmaAndPodcast() {
       }
     }
     fetchDetails();
-  }, []);
+  }, [page]);
+
+  const showMorePosts = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
 
   return (
     <Box background={"#fff"} pt={"105px"}>
@@ -87,6 +92,7 @@ function AmaAndPodcast() {
       {loading ? (
         <p>Loading....</p>
       ) : (
+        <>
         <Container maxW={1300} p={"0px 25px"}>
           {recentAma.map((post, index) => {
             console.log("post data: ", post);
@@ -133,6 +139,23 @@ function AmaAndPodcast() {
             );
           })}
         </Container>
+        <Box width={"full"} textAlign={"center"}>
+        <Button
+            my={"50px"}
+            bg="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
+            color="#111111"
+            padding={["16px", "20px 24px"]}
+            fontSize={["14px", "16px"]}
+            rounded={0}
+            fontFamily={"PowerGrotesk"}
+            fontWeight={"normal"}
+            letterSpacing={"1px"}
+            mx={"auto"}
+            _hover={{}}
+            onClick={showMorePosts}
+          >Show more</Button>
+        </Box>
+        </>
       )}
       <Subscribe />
     </Box>

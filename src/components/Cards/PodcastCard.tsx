@@ -2,6 +2,8 @@ import { Box, Button, Flex, Tag, Text } from "@chakra-ui/react";
 import React from "react";
 import { FiCopy } from "react-icons/fi";
 import { BsFacebook, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
+import Link from "next/link";
 
 interface PodcastCardProps {
   type: string;
@@ -34,15 +36,17 @@ function PodcastCard({
             {type} / {date}
           </Text>
 
-          <Text
-            fontSize={24}
-            color={"#4C545A"}
-            fontWeight={500}
-            mb={2}
-            fontFamily={"PowerGrotesk"}
-          >
-            {title}
-          </Text>
+          <Link href={link}>
+            <Text
+              fontSize={24}
+              color={"#4C545A"}
+              fontWeight={500}
+              mb={2}
+              fontFamily={"PowerGrotesk"}
+            >
+              {title}
+            </Text>
+          </Link>
 
           <Flex gap={5}>
             {authors.map((author, index) => {
@@ -129,6 +133,8 @@ function PodcastCard({
           <BsLinkedin style={{ color: "#4C545A", fontSize: 20 }} />
         </Flex>
       </Box>
+
+      <TwitterTweetEmbed tweetId={'1654507439897862144'} />
     </Box>
   );
 }

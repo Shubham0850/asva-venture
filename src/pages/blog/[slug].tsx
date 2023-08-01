@@ -109,7 +109,7 @@ function Blog() {
               />
             </Head>
             <Box
-              py={100}
+              py={30}
               borderBottom={"1px solid #ddd"}
               borderStyle={"dashed"}
             >
@@ -199,13 +199,6 @@ function Blog() {
                 w={{ base: "100%", md: "80%" }}
                 mx="auto"
               >
-                <Text
-                  py={4}
-                  fontSize={{ base: "24px", md: "32px" }}
-                  lineHeight={"40px"}
-                >
-                  {data?.title}
-                </Text>
                 <Image
                   src={data.featured_image}
                   maxH={"500px"}
