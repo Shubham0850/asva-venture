@@ -54,7 +54,7 @@ function LatestCard({
         </Flex>
 
         <Box width={{ base: "100%", md: "75%" }} mt={{ base: "10px", md: 0 }}>
-          <Link href={link}>
+          <Link href={link} className="title-hover">
             <Text
               fontSize={{ base: "20px", md: "24px" }}
               color={"#4C545A"}

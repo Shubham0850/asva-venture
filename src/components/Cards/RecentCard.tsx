@@ -26,7 +26,6 @@ function RecentCard({
         <Image
           src={bannerImg}
           width={"100%"}
-          height={{ base: "200px", md: "300px" }}
           objectFit={"cover"}
           alt="banner"
           mb={"20px"}
@@ -40,6 +39,14 @@ function RecentCard({
             fontFamily={"PowerGrotesk"}
             fontWeight={500}
             mb={2}
+            maxH="3em"
+            overflow="hidden"
+            textOverflow="ellipsis"
+            display="-webkit-box"
+            style={{
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+            }}
           >
             {title}
           </Text>

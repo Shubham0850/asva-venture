@@ -36,7 +36,7 @@ function PodcastCard({
             {type} / {date}
           </Text>
 
-          <Link href={link}>
+          <Link href={link} className="title-hover">
             <Text
               fontSize={24}
               color={"#4C545A"}

@@ -44,7 +44,7 @@ function AnnouncementCard({
         </Text>
       </Link>
 
-      <Flex gap={2} mt={3} mb={"70px"}>
+      <Flex gap={2} mt={3} mb={"70px"} wrap={"wrap"}>
         {tags.map((tag, index) => {
           return (
             <Tag
