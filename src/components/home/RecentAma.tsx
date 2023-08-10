@@ -1,4 +1,6 @@
-import { Container, Flex, Text, Link, Grid, Box } from "@chakra-ui/react";
+import { Container, Flex, Text, Grid, Box } from "@chakra-ui/react";
+import Link from "next/link"
+
 import React, { useEffect, useState } from "react";
 import { GoArrowRight } from "react-icons/go";
 import LatestCard from "../Cards/LatestCard";
@@ -33,7 +35,6 @@ const RecentAma: React.FC = () => {
         const _response = await axios.get(
           `${API_ENDPOINT}${ENV}/posts/?number=3&category='AMA'`
         );
-        console.log("Announcements", { _response });
         setRecentAma(_response.data.posts);
         setLoading(false);
       } catch (error) {

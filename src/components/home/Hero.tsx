@@ -1,4 +1,6 @@
-import { Container, Image, Link } from "@chakra-ui/react";
+import { Container, Image } from "@chakra-ui/react";
+import Link from "next/link";
+
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { Box, Button, Text, Icon } from "@chakra-ui/react";
@@ -47,7 +49,7 @@ function Hero() {
             companies
           </Text>
 
-          <Link href="mailto:pitch@asvaventures.com">
+          <Link href="mailto:pitch@asvaventures.com" >
             <Button
               gap={2}
               mt={"50px"}

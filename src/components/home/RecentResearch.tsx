@@ -1,4 +1,5 @@
-import { Container, Flex, Text, Link, Grid, Box } from "@chakra-ui/react";
+import { Container, Flex, Text, Grid, Box } from "@chakra-ui/react";
+import Link from "next/link"
 import React, { useState, useEffect } from "react";
 import ResearchCard from "../Cards/ResearchCard";
 import { GoArrowRight } from "react-icons/go";

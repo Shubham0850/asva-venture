@@ -6,9 +6,8 @@ import {
   Text,
   Button,
   Container,
-  Link,
 } from "@chakra-ui/react";
-
+import Link from "next/link"
 type CardProps = {
   image: string;
   heading: string;

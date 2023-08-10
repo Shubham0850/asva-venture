@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Box, Container, Flex, Grid, Text, Link } from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, Text,  } from "@chakra-ui/react";
+import Link from "next/link"
 import { GoArrowRight } from "react-icons/go";
 import axios from "axios";
 import AnnouncementCard from "../Cards/AnnouncementCard";

@@ -1,4 +1,6 @@
-import { Box, Text, Link, Flex } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
+import Link from "next/link";
+
 import React from "react";
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 

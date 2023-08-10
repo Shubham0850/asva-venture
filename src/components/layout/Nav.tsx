@@ -1,4 +1,5 @@
-import { Box, Container, Flex, Link, Divider, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Divider, Text } from "@chakra-ui/react";
+import Link from "next/link"
 import { useState } from "react";
 import { TbMenu } from "react-icons/tb";
 import {AiOutlineCloseSquare} from "react-icons/ai"
@@ -23,11 +24,13 @@ function NavBar() {
         >
           <Link
             href="/"
-            p="0px"
-            width={{ base: "108px", md: "130px" }}
-            height={{ base: "61px", md: "73px" }}
+
           >
+           <Box             p="0px"
+            width={{ base: "108px", md: "130px" }}
+            height={{ base: "61px", md: "73px" }}>
             <img src="/asva-venture-logo.svg" alt="asva-venture logo" />
+            </Box> 
           </Link>
 
           <Flex
@@ -37,55 +40,67 @@ function NavBar() {
           >
             <Link
               href="/"
-              mr={4}
+
+            >
+              <Text               mr={4}
               color="#888888"
               _hover={{
                 color: "black",
                 textDecoration: "none",
               }}
               fontWeight={500}
-              fontFamily={"PowerGrotesk"}
-            >
+              fontFamily={"PowerGrotesk"}>
+
               Home
+              </Text>
             </Link>
             <Link
               href="/#insights"
-              mr={4}
+          
+            >
+              <Text     mr={4}
               color="#888888"
               _hover={{
                 color: "black",
                 textDecoration: "none",
               }}
               fontFamily={"PowerGrotesk"}
-              fontWeight={500}
-            >
+              fontWeight={500}>
+
               Insights
+              </Text>
             </Link>
             <Link
               href="#"
-              mr={4}
+             
+            >
+              <Text  mr={4}
               color="#888888"
               _hover={{
                 color: "black",
                 textDecoration: "none",
               }}
               fontFamily={"PowerGrotesk"}
-              fontWeight={500}
-            >
+              fontWeight={500}>
+
               Portfolio
+              </Text>
             </Link>
             <Link
               href="#"
-              mr={4}
+              
+            >
+              <Text mr={4}
               color="#888888"
               _hover={{
                 color: "black",
                 textDecoration: "none",
               }}
               fontFamily={"PowerGrotesk"}
-              fontWeight={500}
-            >
+              fontWeight={500}>
+
               About
+              </Text>
             </Link>
           </Flex>
 

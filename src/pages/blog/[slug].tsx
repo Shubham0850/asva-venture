@@ -64,6 +64,7 @@ function Blog() {
     const currentLink = encodeURIComponent(window.location.href);
     setCurrentLink(currentLink);
   }, []);
+  
   const handleTwitterShare = () => {
     const tweetText = "Check out this link: " + currentLink;
     const twitterShareUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
