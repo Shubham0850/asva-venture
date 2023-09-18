@@ -1,20 +1,20 @@
 /* Custom font imports */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @font-face {
-  font-family: "PowerGrotesk";
-  src: url("/fonts/PowerGrotesk-Regular.ttf") format("truetype");
+  font-family: 'PowerGrotesk';
+  src: url('/fonts/PowerGrotesk-Regular.ttf') format('truetype');
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .secondary-font {
-  font-family: "PowerGrotesk", sans-serif;
+  font-family: 'PowerGrotesk', sans-serif;
 }
 
 p {
@@ -32,7 +32,7 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
-.title-hover:hover{
+.title-hover:hover {
   text-decoration: underline;
 }
 
@@ -104,4 +104,15 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
+}
+.containerabout {
+  height: 200px;
+  color: black;
+}
+.line {
+  border-top: 1px dashed #888;
+  margin: 20px 0;
+}
+.cardContainer {
+  width: 260px;
 }
