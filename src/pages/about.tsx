@@ -1,3 +1,4 @@
+'use client';
 import GpComp from '@/components/about/Gp';
 import Hero from '@/components/about/Hero';
 import TeamCard from '@/components/about/TeamCard';

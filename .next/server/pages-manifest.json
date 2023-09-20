@@ -1,16 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/ama-podcast": "pages/ama-podcast.html",
-  "/about": "pages/about.html",
-  "/announcements": "pages/announcements.html",
-  "/api/hello": "pages/api/hello.js",
-  "/blog/[slug]": "pages/blog/[slug].html",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.html",
-  "/podcast/[podcast]": "pages/podcast/[podcast].html",
-  "/product": "pages/product.html",
-  "/recent-post": "pages/recent-post.html",
-  "/research": "pages/research.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/blog/[slug]": "pages/blog/[slug].js",
+  "/about": "pages/about.js"
 }

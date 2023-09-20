@@ -65,7 +65,7 @@ function NavBar() {
                 Insights
               </Text>
             </Link>
-            <Link href='/product'>
+            <Link href='/portfolio'>
               <Text
                 mr={4}
                 color='#888888'
@@ -76,7 +76,7 @@ function NavBar() {
                 fontFamily={'PowerGrotesk'}
                 fontWeight={500}
               >
-                Portfolio
+                portfolio
               </Text>
             </Link>
             <Link href='/about'>
