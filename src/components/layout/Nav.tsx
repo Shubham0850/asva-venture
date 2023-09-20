@@ -76,7 +76,7 @@ function NavBar() {
                 fontFamily={'PowerGrotesk'}
                 fontWeight={500}
               >
-                portfolio
+                Portfolio
               </Text>
             </Link>
             <Link href='/about'>
@@ -137,7 +137,7 @@ function NavBar() {
           </Box>
         </Link>
 
-        <Link href='#'>
+        <Link href='/portfolio'>
           <Box p={5} borderBottom={'1px solid #cecece'}>
             <Text
               textAlign={'center'}

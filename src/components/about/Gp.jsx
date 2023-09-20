@@ -12,7 +12,12 @@ function GpComp() {
           py={10}
           w='100%'
         >
-          <Box w={['100%', '100%', '50%']}>
+          <Box
+            w={['100%', '100%', '50%']}
+            style={{
+              position: 'relative',
+            }}
+          >
             <Text
               color='#4C545A'
               fontWeight={400}
@@ -20,17 +25,37 @@ function GpComp() {
             >
               General Partener Asva Ventures
             </Text>
-            <Text
-              color='#4C545A'
-              fontWeight={700}
-              fontSize={{ base: '20px', md: '40px' }}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'start',
+                position: 'relative',
+              }}
             >
-              Mallikarjuna Naidu
-            </Text>
+              <Text
+                color='#4C545A'
+                fontWeight={700}
+                pr={'5px'}
+                fontSize={{ base: '20px', md: '40px' }}
+                style={{
+                  zIndex: '1',
+                  background: '#fff',
+                }}
+              >
+                Mallikarjuna Naidu
+              </Text>
+              <hr
+                style={{
+                  position: 'absolute',
+                  borderTop: '1px dashed #4C545A',
+                }}
+              />
+            </div>
             <Text
               color='#888'
               fontWeight={400}
-              fontSize={{ base: '20px', md: '20px' }}
+              fontSize={['14px', '20px']}
               py={50}
             >
               Mallikarjuna Naidu, the visionary founding partner of Asva
@@ -49,7 +74,7 @@ function GpComp() {
             </Text>
           </Box>
           <Box w={['100%', '100%', '40%']} m={['auto', 'auto']}>
-            <Image src='/img1.png' />
+            <Image src='/naidu.png' />
           </Box>
         </Flex>
       </Container>

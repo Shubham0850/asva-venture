@@ -12,6 +12,12 @@ import { Box, Button, Card, Flex, Image, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 
 export default function About() {
+  const gotToOpenPosition = () => {
+    window.open(
+      'https://asvalabs.notion.site/asvalabs/Asva-Ventures-c430110ad71c4e9cbe530c5ccb512e9d ',
+      '_ blank'
+    );
+  };
   return (
     <>
       <Head>
@@ -43,6 +49,7 @@ export default function About() {
       <Flex
         maxW={'1100px'}
         justifyContent={'space-between'}
+        alignItems={'start'}
         mx={'auto'}
         my={'20px'}
         background={'#F8F8F8'}
@@ -50,23 +57,26 @@ export default function About() {
         flexDirection={['column', 'column', 'row']}
       >
         <Box
-          textAlign={['center', 'start']}
+          textAlign={['center', 'center', 'start']}
           w={['100%', '100%', '60%']}
           m={['auto', 'auto']}
         >
           <Text
             fontSize={['36px', '48px']}
             height={'auto'}
+            textAlign={['center', 'center', 'start']}
+            mb={['10px']}
             style={{
               fontWeight: 500,
             }}
             color={'#4C545A'}
           >
-            Career Hirings
+            Open Positions
           </Text>
           <Text
             fontSize={['14px', '20px']}
             height={'auto'}
+            textAlign={['center', 'center', 'start']}
             style={{
               fontWeight: 400,
             }}
@@ -78,10 +88,10 @@ export default function About() {
           </Text>
         </Box>
         <Box
+          my={['20px', '20px', '0']}
           mx='auto'
-          my={['20px', 'auto']}
           w={['100%', '100%', '40%']}
-          textAlign={['center', 'end']}
+          textAlign={['center', 'center', 'end']}
         >
           <Button
             colorScheme='teal'
@@ -96,6 +106,7 @@ export default function About() {
             fontWeight={'normal'}
             color='black'
             ml='auto'
+            onClick={gotToOpenPosition}
           >
             collaborate now
           </Button>

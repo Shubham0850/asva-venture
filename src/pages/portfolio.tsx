@@ -53,12 +53,23 @@ export default function Product() {
         </Heading> */}
       </Box>
       <Flex justifyContent='center' flexWrap='wrap' background={'#F8F8F8'}>
+        <ProductCard
+          title='Shardeum'
+          desc='An EVM based L1 Blockchain utilizing dynamic state sharding.'
+          img='/shardeum.png'
+        />
+        <ProductCard
+          title='Sei'
+          desc='A Cosmos-based L1 uniquely optimized the exchange of digital assets '
+          img='/sei.png'
+        />
         <ProductCard title='Wizardia' desc='Metaverse P2E Game' img='/1.png' />
         <ProductCard
           title='MetaBloxz'
           desc='A Metaverse Platform for Enterprises'
           img='/7.png'
         />
+
         <ProductCard
           title='Meta Fighter'
           desc=' A Fighting Game Metaverse'
@@ -100,61 +111,7 @@ export default function Product() {
           img='/3.png'
         />
       </Flex>
-      <Box textAlign={'center'} py={['20px', '50px']} background={'#F8F8F8'}>
-        <Heading
-          as='h2'
-          size='xl'
-          my='24px'
-          fontWeight={500}
-          fontSize={['32px', '48px']}
-          color='#4C545A'
-          height='60px'
-          fontFamily='PowerGrotesk'
-        >
-          The Ventures & The Builders
-        </Heading>
-        <Text
-          fontWeight={400}
-          fontSize={['16px', '20px']}
-          color='#888'
-          height='60px'
-          fontFamily='PowerGrotesk'
-          my={'15px'}
-          maxW={'1000px'}
-          textAlign={'center'}
-          mx={'auto'}
-        >
-          A monthly newsletter for web3 builders & investors. The only
-          newsletter you need to stay updated on web3 fundraising, major events
-          & conferences, best VC reads, and a lot more
-        </Text>
-        <Flex
-          maxW={'600px'}
-          style={{
-            border: '1px solid #393939',
-          }}
-          mx={'auto'}
-          my={['40px']}
-        >
-          <Input border={'none'} placeholder='Whats your email?' h={'48px'} />
-          <Button
-            colorScheme='teal'
-            bgGradient='linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)'
-            height='48px'
-            padding='20px 24px'
-            rounded={0}
-            size={'sm'}
-            width='min-content'
-            fontFamily={'PowerGrotesk'}
-            letterSpacing={'1px'}
-            fontWeight={'normal'}
-            color='black'
-            ml='auto'
-          >
-            Subscribe Now
-          </Button>
-        </Flex>
-      </Box>
+      <Subscribe />
     </>
   );
 }

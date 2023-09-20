@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingslash: true,
   reactStrictMode: true,
   images: {
-   unoptimized: true,
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
@@ -12,7 +13,7 @@ const nextConfig = {
         pathname: '/image/upload/**',
       },
     ],
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

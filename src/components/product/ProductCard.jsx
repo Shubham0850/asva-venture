@@ -20,7 +20,13 @@ function ProductCard({ title, desc, img }) {
           borderRight: '1px solid #393939',
         }}
       >
-        <Image src={img} width={'100%'} />
+        <Image
+          src={img}
+          width={'100%'}
+          style={{
+            backgroundBlendMode: 'multiply',
+          }}
+        />
       </Box>
       <Flex
         textAlign='start'

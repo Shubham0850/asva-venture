@@ -30,7 +30,7 @@ function Hero() {
             }}
             color={'#000'}
           >
-            Our Investments
+            Our Portfolio
           </Text>
 
           <Text
