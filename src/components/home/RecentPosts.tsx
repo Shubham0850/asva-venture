@@ -75,7 +75,7 @@ function RecentPosts() {
             fontWeight={800}
             fontSize={{ base: "20px", md: "24px" }}
           >
-            Latest from Asva Ventures
+            Latest from Asva Capital
           </Text>
 
           <Link href="/recent-post">

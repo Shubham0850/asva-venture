@@ -19,12 +19,12 @@ function Footer() {
             <Box>
               <Box>
                 <Image
-                  src="/asva-venture-logo-white.svg"
+                  src="/logo2.png"
                   alt="asva logo"
                   width={100}
                 />
                 <Text color={"#888888"} fontSize={"16px"}>
-                  Backing and accelerating web3 founders
+                Thesis Driven Digital Asset fund 
                 </Text>
               </Box>
               <Flex
@@ -89,7 +89,7 @@ function Footer() {
                     color={"#FFFFFF"}
                     textDecoration={"underline"}
                   >
-                    contact@asvaventures.com
+                    info@asvacapital.com
                   </Text>
                 </Link>
               </Box>

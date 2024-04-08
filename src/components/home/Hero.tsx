@@ -16,7 +16,7 @@ function Hero() {
       >
         <Box
           pt={["90px", "130px"]}
-          pb={["120px", "180px", "320px"]}
+          pb={["120px", "180px", "250px"]}
           justifyContent={"flex-start"}
         >
           <Text
@@ -28,12 +28,11 @@ function Hero() {
             }}
             color={"#000"}
           >
-            A thesis-driven Web3 fund backing{" "}
-            <span className="green-gradient-text">ambitious</span> founders
-            shaping the next iteration of the Internet
+            A thesis driven{" "}
+            <span className="green-gradient-text">Digital Asset fund  investing</span> across diverse digital assets in private and public markets
           </Text>
 
-          <Text
+          {/* <Text
             mt={"28px"}
             width={["100%", "100%", "899px"]}
             fontSize={["14px", "20px"]}
@@ -47,12 +46,12 @@ function Hero() {
             pre-seed and seed companies. We lead, as well as co-invest, while
             leveraging our invaluable expertise to propel growth in portfolio
             companies
-          </Text>
+          </Text> */}
 
           <Link href="mailto:pitch@asvaventures.com" >
             <Button
               gap={2}
-              mt={"50px"}
+              mt={"20px"}
               bg="linear-gradient(135deg, #80FE7E 0%, #62FEA5 51.56%, #52FFBC 100%)"
               color="#111111"
               padding={["16px", "20px 24px"]}
@@ -63,7 +62,7 @@ function Hero() {
               letterSpacing={"1px"}
               _hover={{}}
             >
-              Pitch Us
+             Talk With Us
               <Icon
                 className="blink"
                 as={BsArrowRight}
@@ -79,7 +78,7 @@ function Hero() {
       <Image
         src="/heroBg.png"
         width={"90%"}
-        height={{ base: "100vh", md: "100%" }}
+        height={{ base: "85%", md: "100%" }}
         objectFit={"cover"}
         position={"absolute"}
         top={[30, 0]}

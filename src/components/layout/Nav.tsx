@@ -6,7 +6,7 @@ import {AiOutlineCloseSquare} from "react-icons/ai"
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
-
+  
   const toggleMenu = () => {
     setMenu(!menu);
   }
@@ -29,7 +29,7 @@ function NavBar() {
            <Box             p="0px"
             width={{ base: "108px", md: "130px" }}
             height={{ base: "61px", md: "73px" }}>
-            <img src="/asva-venture-logo.svg" alt="asva-venture logo" />
+            <img src="/logo.png" alt="asva-venture logo" />
             </Box> 
           </Link>
 
@@ -38,6 +38,9 @@ function NavBar() {
             display={{ base: "none", md: "flex" }}
             alignItems="center"
           >
+
+            
+
             <Link
               href="/"
 
@@ -52,6 +55,23 @@ function NavBar() {
               fontFamily={"PowerGrotesk"}>
 
               Home
+              </Text>
+            </Link>
+
+            <Link
+              href="/#OurFunds"
+
+            >
+              <Text               mr={4}
+              color="#888888"
+              _hover={{
+                color: "black",
+                textDecoration: "none",
+              }}
+              fontWeight={500}
+              fontFamily={"PowerGrotesk"}>
+
+              Funds
               </Text>
             </Link>
             <Link
@@ -114,6 +134,12 @@ function NavBar() {
         <Link href="/">
           <Box p={5} borderBottom={"1px solid #cecece"}>
             <Text textAlign={"center"} color={"#000"} fontSize={18} fontWeight={700}>Home</Text>
+          </Box>
+        </Link>
+
+        <Link  href="/#OurFunds">
+          <Box p={5} borderBottom={"1px solid #cecece"}>
+            <Text textAlign={"center"} color={"#000"} fontSize={18} fontWeight={700}>Funds</Text>
           </Box>
         </Link>
 

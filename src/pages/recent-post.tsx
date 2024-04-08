@@ -25,7 +25,7 @@ function RecentPosts() {
               fontWeight={400}
               color={"#888"}
             >
-              Discover the latest from Asva Ventures. Explore a collection of
+              Discover the latest from Asva Capital. Explore a collection of
               our freshest insights, exciting news, and timely updates—all
               conveniently brought together in one place.
             </Text>

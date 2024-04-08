@@ -23,7 +23,7 @@ function Announcements() {
               fontWeight={400}
               color={"#888"}
             >
-              Get the inside scoop on Asva Venture&apos;s progress, here we
+              Get the inside scoop on Asva Capital&apos;s progress, here we
               share updates, news, and noteworthy developments, partnerships &
               milestones.
             </Text>

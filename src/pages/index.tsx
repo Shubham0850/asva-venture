@@ -1,3 +1,4 @@
+import Funds from "@/components/home/Funds";
 import Hero from "@/components/home/Hero";
 import ReachOut from "@/components/home/ReachOut";
 import RecentAma from "@/components/home/RecentAma";
@@ -13,7 +14,7 @@ export default function Home() {
       <Head>
         <title>
           A thesis-driven Web3 fund backing ambitious founders shaping the next
-          iteration of the Internet | Asva Ventures
+          iteration of the Internet | Asva Capital
         </title>
         <meta
           name="description"
@@ -25,6 +26,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <Funds/>
       <RecentPosts />
       <RecentResearch />
       <RecentAnnouncement />
