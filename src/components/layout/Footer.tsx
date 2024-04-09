@@ -53,7 +53,7 @@ function Footer() {
                 </Link>
                 <Link
                   href={
-                    "https://asvalabs.notion.site/asvalabs/Asva-Ventures-c430110ad71c4e9cbe530c5ccb512e9d#"
+                    "https://asvaventures.notion.site/Hirings-677d85023d594689978acba8f3cbc8b6"
                   }
                   target="_blank"
                 >
@@ -136,7 +136,7 @@ function Footer() {
             </Box>
           </Flex>
 
-          <Divider backgroundColor={"#888888"} />
+          {/* <Divider backgroundColor={"#888888"} />
 
           <Flex
             color={"#888888"}
@@ -162,13 +162,13 @@ function Footer() {
               {" "}
               <Link href={"#"}>Privacy Policy</Link>
             </Text>
-          </Flex>
+          </Flex> */}
         </Box>
       </Container>
 
       <Image
         width={"100%"}
-        height={{base: "100%", md: "auto"}}
+        height={{base: "100%", md: "100%"}}
         position={"absolute"}
         objectFit={"cover"}
         top={0}
