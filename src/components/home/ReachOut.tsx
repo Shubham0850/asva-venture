@@ -112,14 +112,14 @@ const Section = () => {
               heading="Pitch Your Project"
               paragraph="Join the ranks of ambitious founders revolutionizing industries. We're eager to hear your disruptive proposal."
               buttonText="Apply Now"
-              link="mailto:pitch@asvaventures.com"
+              link="mailto:Pitch@asvaventures.com"
             />
             <Card
               image="ellipse-2.svg"
               heading="Invest in our Fund"
               paragraph="Are you a bold investor seeking groundbreaking opportunities that shape the future of technology? Join us, be a part of the wave shaping the world!"
               buttonText="Invest Now"
-              link="mailto:invest@asvaventures.com"
+              link="mailto:contact@asvaventures.com"
             />
             <Card
               image="ellipse-3.svg"

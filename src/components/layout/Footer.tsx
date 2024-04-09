@@ -89,7 +89,7 @@ function Footer() {
                     color={"#FFFFFF"}
                     textDecoration={"underline"}
                   >
-                    info@asvacapital.com
+                    contact@asvaventures.com
                   </Text>
                 </Link>
               </Box>
@@ -102,7 +102,7 @@ function Footer() {
                 pt={[0, 20]}
               >
                 <Text fontSize={"20px"}>Follow Us :</Text>
-                <Link href={"https://twitter.com/asvaventures"} target="_blank">
+                <Link href={"https://x.com/asvacapital"} target="_blank">
                   <BsTwitter
                     style={{
                       fontSize: "24px",
@@ -111,7 +111,7 @@ function Footer() {
                     }}
                   />
                 </Link>
-                <Link href={"https://t.me/AsvaVenturesANN"} target="_blank">
+                <Link href={"https://t.me/AsvaCapitalANN"} target="_blank">
                   <BsTelegram
                     style={{
                       fontSize: "24px",
@@ -121,7 +121,7 @@ function Footer() {
                   />
                 </Link>
                 <Link
-                  href={"https://www.linkedin.com/company/asvaventures/"}
+                  href={"https://www.linkedin.com/company/asvacapital/"}
                   target="_blank"
                 >
                   <BsLinkedin
