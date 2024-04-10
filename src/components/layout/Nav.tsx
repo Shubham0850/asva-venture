@@ -28,7 +28,7 @@ function NavBar() {
               width={{ base: '108px', md: '130px' }}
               height={{ base: '61px', md: '73px' }}
             >
-              <img src='/asva-venture-logo.svg' alt='asva-venture logo' />
+              <img src='/logo.png' alt='asva-venture logo' />
             </Box>
           </Link>
 
@@ -49,6 +49,20 @@ function NavBar() {
                 fontFamily={'PowerGrotesk'}
               >
                 Home
+              </Text>
+            </Link>
+            <Link href='/#funds'>
+              <Text
+                mr={4}
+                color='#888888'
+                _hover={{
+                  color: 'black',
+                  textDecoration: 'none',
+                }}
+                fontFamily={'PowerGrotesk'}
+                fontWeight={500}
+              >
+                Funds
               </Text>
             </Link>
             <Link href='/#insights'>
@@ -121,6 +135,12 @@ function NavBar() {
             >
               Home
             </Text>
+          </Box>
+        </Link>
+
+        <Link  href="/#funds">
+          <Box p={5} borderBottom={"1px solid #cecece"}>
+            <Text textAlign={"center"} color={"#000"} fontSize={18} fontWeight={700}>Funds</Text>
           </Box>
         </Link>
 

@@ -43,14 +43,14 @@ function Hero() {
             }}
             color={'#888'}
           >
-            Asva Ventures was born out of a passion for the endless
+            Asva Capital was born out of a passion for the endless
             possibilities of the web3 world. The team, composed of seasoned
             entrepreneurs and investors, saw the potential for a new era of
             decentralized technologies and set out to create a venture capital
             firm that would invest in the next generation of builders. 
-            <br /> <br />   From day one, Asva Ventures has been committed to
+            <br /> <br />   From day one, Asva Capital has been committed to
             backing ambitious founders with the drive and vision to change the
-            world through web3. Since our inception in early 2021, Asva Ventures
+            world through web3. Since our inception in early 2021, Asva Capital
             has deployed investments in more than 30 promising projects from
             various segments, including metaverse, gaming, and NFTs. But Asva
             Ventures is more than just a funding source.  
@@ -58,7 +58,7 @@ function Hero() {
             strong partnerships with VCs, blockchain ecosystems, protocols,
             launchpads, and exchanges we provide strong value-add to our
             portfolio companies, helping them achieve their full potential. 
-            <br /> <br />   Asva Ventures' success is rooted in its commitment
+            <br /> <br />   Asva Capital success is rooted in its commitment
             to supporting promising builders and empowering them to create the
             user-owned internet of the future. We are committed to taking bold
             risks on visionary entrepreneurs who share our mission of building a

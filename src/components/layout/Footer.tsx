@@ -19,12 +19,12 @@ function Footer() {
             <Box>
               <Box>
                 <Image
-                  src="/asva-venture-logo-white.svg"
+                  src="/logo2.png"
                   alt="asva logo"
                   width={100}
                 />
                 <Text color={"#888888"} fontSize={"16px"}>
-                  Backing and accelerating web3 founders
+                Thesis Driven Digital Asset fund
                 </Text>
               </Box>
               <Flex
@@ -52,9 +52,9 @@ function Footer() {
                   </Text>
                 </Link>
                 <Link
-                  href={
-                    "https://asvalabs.notion.site/asvalabs/Asva-Ventures-c430110ad71c4e9cbe530c5ccb512e9d#"
-                  }
+                    href={
+                      "https://asvaventures.notion.site/Hirings-677d85023d594689978acba8f3cbc8b6"
+                    }
                   target="_blank"
                 >
                   <Text
@@ -89,7 +89,7 @@ function Footer() {
                     color={"#FFFFFF"}
                     textDecoration={"underline"}
                   >
-                    contact@asvaventures.com
+                     contact@asvaventures.com
                   </Text>
                 </Link>
               </Box>
@@ -102,7 +102,7 @@ function Footer() {
                 pt={[0, 20]}
               >
                 <Text fontSize={"20px"}>Follow Us :</Text>
-                <Link href={"https://twitter.com/asvaventures"} target="_blank">
+                <Link href={"https://x.com/asvacapital"} target="_blank">
                   <BsTwitter
                     style={{
                       fontSize: "24px",
@@ -111,7 +111,7 @@ function Footer() {
                     }}
                   />
                 </Link>
-                <Link href={"https://t.me/AsvaVenturesANN"} target="_blank">
+                <Link href={"https://t.me/AsvaCapitalANN"} target="_blank">
                   <BsTelegram
                     style={{
                       fontSize: "24px",
@@ -121,7 +121,7 @@ function Footer() {
                   />
                 </Link>
                 <Link
-                  href={"https://www.linkedin.com/company/asvaventures/"}
+                  href={"https://www.linkedin.com/company/asvacapital/"}
                   target="_blank"
                 >
                   <BsLinkedin
@@ -136,39 +136,14 @@ function Footer() {
             </Box>
           </Flex>
 
-          <Divider backgroundColor={"#888888"} />
-
-          <Flex
-            color={"#888888"}
-            align="center"
-            justify={"center"}
-            gap={10}
-            py={8}
-          >
-            <Text
-              fontSize={["12px", "16px"]}
-              letterSpacing={"-1px"}
-              lineHeight={"150%"}
-            >
-              {" "}
-              <span className="hidden">Asvaventures © </span>2022 All rights
-              reserved
-            </Text>
-            <Text fontSize={["12px", "16px"]} letterSpacing={"-1px"}>
-              {" "}
-              <Link href={"#"}>Terms Of Use</Link>
-            </Text>
-            <Text fontSize={["12px", "16px"]} letterSpacing={"-1px"}>
-              {" "}
-              <Link href={"#"}>Privacy Policy</Link>
-            </Text>
-          </Flex>
+          
+        
         </Box>
       </Container>
 
       <Image
         width={"100%"}
-        height={{base: "100%", md: "auto"}}
+        height={{base: "100%", md: "100%"}}
         position={"absolute"}
         objectFit={"cover"}
         top={0}

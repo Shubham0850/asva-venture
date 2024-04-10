@@ -23,7 +23,7 @@ function GpComp() {
               fontWeight={400}
               fontSize={{ base: '20px', md: '24px' }}
             >
-              General Partener Asva Ventures
+              General Partener Asva Capital
             </Text>
             <div
               style={{
