@@ -126,7 +126,7 @@ const Section = () => {
               heading="Partner With us"
               paragraph="Unleash the full potential of the web3 through collaborative partnerships. Join us to amplify your impact and thrive in this groundbreaking ecosystem."
               buttonText="Collaborate Now"
-              link="matilto:contact@asvaventures.com"
+              link="mailto:contact@asvaventures.com"
               isLast
             />
           </Flex>
