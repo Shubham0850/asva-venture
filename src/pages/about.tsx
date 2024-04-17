@@ -50,11 +50,11 @@ export default function About() {
         alignItems={'start'}
         mx={'auto'}
         my={'20px'}
-        background={'#F8F8F8'}
+        // background={'#F8F8F8'}
         p='3rem'
         flexDirection={['column', 'column', 'row']}
       >
-        <Box
+        {/* <Box
           textAlign={['center', 'center', 'start']}
           w={['100%', '100%', '60%']}
           m={['auto', 'auto']}
@@ -108,7 +108,7 @@ export default function About() {
           >
             collaborate now
           </Button>
-        </Box>
+        </Box> */}
       </Flex>
     </>
   );

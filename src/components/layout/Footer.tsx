@@ -65,7 +65,7 @@ function Footer() {
                     Career
                   </Text>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"/about"}>
                   <Text
                     fontSize={"20px"}
                     color={"#FFF"}

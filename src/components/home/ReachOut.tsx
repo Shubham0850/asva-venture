@@ -87,7 +87,7 @@ const Card = ({
 
 const Section = () => {
   return (
-    <Box bg="#1F1F1F" py={"50px"} id="insights">
+    <Box bg="#1F1F1F" py={"50px"} >
       <Container maxW={1400} padding="0px 25px">
         <Box>
           <Heading

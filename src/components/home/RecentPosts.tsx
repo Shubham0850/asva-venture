@@ -46,6 +46,7 @@ function RecentPosts() {
       bg="#F8F8F8"
       position="relative"
       zIndex={10}
+      id="insights"
       pb={100}
       borderBottom="1px solid #ddd"
       borderStyle="dashed"
